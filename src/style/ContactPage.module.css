@@ -1,0 +1,334 @@
+.container {
+  /* padding: 40px; */
+  font-family: Sans-Serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Carousel */
+
+.carousel_container {
+  width: 90%;
+  margin: auto;
+}
+
+.carousel_container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Map */
+
+.map {
+  height: 500px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.map_container {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.container .hading {
+  width: 100%;
+}
+
+.container .hading p {
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+.container .hading h2 {
+  font-size: 40px;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+}
+
+/* Add User Form */
+
+.container input,
+.container textarea,
+.container select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  outline: none;
+  font-size: 16px;
+  height: 70px;
+  color: #ccc;
+}
+
+.container textarea {
+  height: 150px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+.container select option {
+  background-color: white;
+  height: 50px !important;
+  color: #4219dc;
+}
+
+.container select option:hover {
+  background-color: #4219dc !important;
+  color: white;
+}
+
+button {
+  background: linear-gradient(90deg, #4219dc, #973af1);
+  color: white;
+  border: none !important;
+  border-radius: 50px;
+  padding: 20px 35px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 250px;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+/* Contact Card */
+
+.contacts_container {
+  padding: 2%;
+}
+
+.contact_item {
+  background-color: #e9ecef;
+  padding-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+  height: 300px;
+  width: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 2%;
+}
+
+.contact_item p {
+  margin: 0;
+  color: #808080;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.contact_item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.contact_item {
+  position: relative;
+  padding-top: 15px;
+}
+
+.contact_item div:nth-child(1) {
+  background: #f8f9fa;
+  width: 120px;
+  height: 150px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 15px;
+  transform: rotate(90deg);
+  margin-top: 20px;
+}
+
+.contact_item div:nth-child(2) {
+  width: 120px;
+  height: 150px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 2;
+  top: 0; /* Ֆիքսված դիրք */
+  left: 50%; /* Ֆիքսված դիրք */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Transition գույնի փոփոխության համար */
+}
+
+.icon {
+  color: #6610f2;
+  font-size: 40px;
+}
+
+/* Hover-ի ազդեցություն ամբողջ service-item-ի վրա */
+.contact_item:hover div:nth-child(2) {
+  background-color: #6610f2; /* Hover-ի ժամանակ գույնի փոփոխություն */
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+.contact_item:hover div:nth-child(1) {
+  background-color: #6610f2; /* Hover-ի ժամանակ գույնի փոփոխություն */
+  transition: color 0.3s ease;
+}
+
+.fa-icon {
+  font-size: 60px; /* Չափը */
+  color: #6610f2; /* Սկզբնական գույնը */
+  transform: rotate(-90deg); /* Ուղղությունը */
+  transition: color 0.3s ease; /* Գույնի փոփոխման անիմացիա */
+}
+
+/* Hover-ի ազդեցություն ամբողջ service-item-ի վրա */
+.contact_item:hover .fa-icon {
+  color: #fff; /* Hover-ի ժամանակ գույնի փոփոխություն */
+  transition: color 0.3s ease;
+}
+
+.contact_title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 2%;
+}
+
+.contact_description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Particles */
+
+.particles_container {
+  width: 100%;
+  height: 326px;
+  font-size: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.particles_container h2 {
+  width: 75%;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  margin-top: 90px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.particles_container div {
+  width: 72%;
+  margin: 0 auto;
+  margin-top: 150px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Desktop (վերին սահման 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 60px;
+    font-size: 18px;
+  }
+
+  .map {
+    height: 600px;
+  }
+}
+
+/* Tablet (միջակայք 768px-1200px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 50px;
+    font-size: 16px;
+  }
+
+  .map {
+    height: 400px;
+  }
+}
+
+/* Mobile (միջակայք 576px-768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding: 30px;
+    font-size: 14px;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+  .hading h2 {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .hading p {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .contacts_container {
+    margin-top: 10px;
+    padding: 20px;
+  }
+}
+
+/* Extra Small Devices (մինչև 576px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100vw;
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .map {
+    width: 90vw;
+    height: 250px;
+  }
+
+  button {
+    width: 200px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .particles_container h2 {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+
+  .container .hading h2 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bolder;
+  }
+
+  .contacts_container {
+    margin-top: 10px;
+  }
+
+  .contact_item {
+    margin-top: 10px;
+  }
+}
