@@ -1,16 +1,17 @@
 .container {
-  /* padding: 40px; */
   font-family: Sans-Serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .container ul li :first-child {
   color: white;
   text-decoration: none;
   font-size: 16px;
+}
+
+.info {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 /* Carousel */
@@ -234,6 +235,10 @@ button {
   text-align: center;
 }
 
+.particles_container h2 :last-child {
+  width: 50%;
+}
+
 .particles_container div {
   width: 72%;
   margin: 0 auto;
@@ -272,6 +277,17 @@ button {
   .container {
     padding: 30px;
     font-size: 14px;
+    overflow-x: hidden !important;
+  }
+
+  .menu :first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .map {
@@ -300,6 +316,7 @@ button {
     width: 100vw;
     padding: 20px;
     font-size: 12px;
+    overflow-x: hidden;
   }
 
   .map {

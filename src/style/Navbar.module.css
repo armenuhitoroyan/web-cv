@@ -1,0 +1,47 @@
+.container {
+  width: 20%;
+}
+
+.container a {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container svg {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.container button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header {
+  width: 72%;
+  margin-left: 4%;
+  margin-top: 4%;
+  position: absolute;
+  z-index: 2;
+  visibility: visible;
+}
+
+@media (max-width: 767px) {
+  .header {
+    visibility: hidden;
+  }
+}

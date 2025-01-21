@@ -3,16 +3,12 @@ import { FaPhone, FaVoicemail, FaLocationArrow } from "react-icons/fa";
 
 import styles from "../../style/ContactPage.module.css";
 import ContactCard from "./ContactCard";
+import Data from "../../interfaces/Data";
 
-// User-ի տվյալները
-interface UserData {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
+
 
 const ContactsCard: React.FC = () => {
-  const userdata: UserData[] = [
+  const userdata: Data[] = [
     {
       icon: <FaPhone className={styles.fa_icon} />,
       title: "Phone Number",

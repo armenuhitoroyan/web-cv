@@ -21,12 +21,16 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className={` ${styles.container}`}>
-      <ParticlesContainer title="Contact us" img={bgImage} />
+    <div
+      className={`${styles.container} w-full  flex-col items-center justify-center md:flex-row`}
+    >
+      <div className={styles.menu}>
+        <ParticlesContainer title="Contact us" ref="contact" img={bgImage} />
+      </div>
 
       <ContactsCard />
       <div
-        style={{ width: "70%" }}
+        style={{ width: "100%" }}
         className="w-full  flex-col items-center justify-center md:flex-row"
       >
         <div
@@ -39,7 +43,9 @@ const ContactPage: React.FC = () => {
             </h2>
           </div>
         </div>
-        <AddUserForm onAdd={handleAddUser} />
+        <div className={styles.info}>
+          <AddUserForm onAdd={handleAddUser} /> 
+        </div>
       </div>
       <Map />
       <Carousel />

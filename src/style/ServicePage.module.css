@@ -1,8 +1,37 @@
 .container {
-  color: cyan;
-  padding: 40px;
   font-family: Sans-Serif;
   text-align: center;
-  background-color: rgb(166, 250, 250);
 }
 
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 սյուն */
+  gap: 25px; /* Տարրերի միջև տարածություն */
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    overflow-x: hidden !important;
+  }
+  .menu :first-child {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    grid-template-columns: repeat(2, 1fr); /* 2 սյուն փոքր էկրանների համար */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    grid-template-columns: 1fr; /* 1 սյուն շատ փոքր էկրանների համար */
+  }
+}

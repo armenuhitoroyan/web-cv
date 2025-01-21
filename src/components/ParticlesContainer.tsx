@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 interface ParticlesContainerProps {
   title: string;
   img: string;
+  ref: string;
 }
 
 declare global {
@@ -16,6 +17,7 @@ declare global {
 const ParticlesContainer: React.FC<ParticlesContainerProps> = ({
   title,
   img,
+  ref,
 }) => {
   useEffect(() => {
     if (window.particlesJS) {
@@ -63,7 +65,7 @@ const ParticlesContainer: React.FC<ParticlesContainerProps> = ({
           </li>
 
           <li>
-            <Link to="/contact">Contact us</Link>
+            <Link to={`/${ref}`}>{title}</Link>
           </li>
         </ul>
       </div>
