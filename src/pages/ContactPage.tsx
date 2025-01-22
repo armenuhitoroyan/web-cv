@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
         <div className={styles.info}>
-          <AddUserForm onAdd={handleAddUser} /> 
+          <AddUserForm onAdd={handleAddUser} />
         </div>
       </div>
       <Map />
