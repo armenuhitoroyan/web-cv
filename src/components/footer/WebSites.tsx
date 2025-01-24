@@ -7,7 +7,7 @@ interface WebPagesProps {
   width: number;
 }
 
-const WebPages: React.FC<WebPagesProps> = ({ width }) => {
+const WebSites: React.FC<WebPagesProps> = ({ width }) => {
   return (
     <div className="flex justify-center flex-row ">
       <ul
@@ -43,4 +43,4 @@ const WebPages: React.FC<WebPagesProps> = ({ width }) => {
   );
 };
 
-export default WebPages;
+export default WebSites;

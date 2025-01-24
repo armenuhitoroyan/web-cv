@@ -16,9 +16,12 @@ const UserInfo: React.FC<UserInfoProps> = ({
 }) => {
   return (
     <li style={style} className={styles.table}>
-      <h6>
+      <h6 style={{ fontSize: "20px" }}>
         {data}
-        <span style={{ color: "red !important" }} className={classname}>
+        <span
+          style={{ color: "red !important", fontSize: "20px" }}
+          className={classname}
+        >
           {responseData}
         </span>
       </h6>

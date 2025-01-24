@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../style/Footer.module.css";
 import logo from "../../assets/images/afsu-logo.png";
-import WebPages from "./WebPages";
+import WebSites from "./WebSites";
 const Footer: React.FC = () => {
   return (
     <footer
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         </p>
       </div>
       <div className="w-full flex-col flex justify-center md:flex-row">
-        <WebPages width={120} />
+        <WebSites width={120} />
       </div>
 
       <div className="w-full flex-col flex justify-center md:flex-row">

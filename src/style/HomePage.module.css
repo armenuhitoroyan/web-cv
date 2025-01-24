@@ -1,9 +1,30 @@
+/* Տառատեսակը */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@keyframes rotateAndResize {
+  0% {
+    width: 300dvh;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    width: 250px;
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    width: 250px;
+    transform: rotate(360deg);
+    opacity: 0; /* Hide the image */
+  }
+}
+
 .container {
-  color: DodgerBlue;
-  padding: 40px;
   font-family: Sans-Serif;
   text-align: center;
-  background-color: lightblue;
 }
 
 /* ContactCard.css */
@@ -14,13 +35,13 @@
   border: 2px solid #8b3eeb;
   border-radius: 10px;
   padding: 20px;
-  width: 250px;
+
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .icon {
-  background-color: #8b3eeb; /* Purple background */
+  background-color: #8b3eeb;
   border-radius: 10px;
   padding: 25px;
   margin-bottom: 10px;
@@ -45,4 +66,353 @@
 .email {
   font-size: 14px;
   color: #333;
+}
+
+.shaps_logo {
+  position: relative;
+  animation: rotateAndResize 5s infinite; /* Infinite loop */
+  transition: opacity 0.5s ease-out;
+}
+
+/* Header */
+
+.header_container {
+  background: linear-gradient(90deg, #00003d, #010060);
+  border-bottom-left-radius: 115%;
+  border-bottom-right-radius: 170%;
+}
+
+.box {
+  height: 450px;
+  color: white;
+  margin: 0px;
+}
+
+.box_content {
+  color: white;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-inline-start: 7%;
+  margin-block-end: 20%;
+  text-align: start;
+}
+
+.box_content h2 {
+  font-size: 30px;
+  text-align: start;
+  margin: 0px;
+  margin-top: 25%;
+}
+
+.box_content h1,
+p {
+  margin-top: 40px;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.box_content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.title_animation {
+  position: relative;
+  margin-inline-start: 160%;
+  z-index: 3;
+  width: 250px;
+  margin-top: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 12%;
+  margin-left: 8.5%;
+}
+
+.img {
+  border-radius: 50%;
+  width: 300px;
+  margin-top: 120px;
+  margin-right: 170px;
+}
+
+.follows_box {
+  width: 11%;
+  height: 150px;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 53%;
+  border-radius: 20px;
+  margin-inline-start: 35%;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+  z-index: 2;
+}
+
+.follows_box p {
+  color: black;
+  font-weight: bold;
+  line-height: 22px;
+  margin-top: -5%;
+  font-size: 17px;
+}
+
+.follows_box h2 {
+  color: #6928e6;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+/* Images */
+
+.image_card {
+  position: relative;
+  width: 200px; /* Set width as needed */
+  height: 250px; /* Set height as needed */
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.image_card div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.image_card:hover .image_card div {
+  opacity: 1;
+}
+
+.image_card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.image_card p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+/*  */
+.content_wrapper {
+  height: 60vh;
+  width: 55%;
+  background: linear-gradient(45deg, #00005f, #7b2ff7);
+}
+
+.left_section {
+  width: 100px;
+  flex: 1;
+  color: #ffffff;
+  padding: 50px;
+  text-align: left;
+}
+.animation_box {
+  position: relative;
+  margin-inline-start: 55%;
+  z-index: 3;
+  width: 300px;
+  margin-top: -300px;
+}
+
+.content_wrapper h2 {
+  font-size: 65px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.content_wrapper p {
+  width: 70%;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+/* Card */
+.article_card_container {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+.image_container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment_badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  color: #6a1b9a;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.content h3 {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* .description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+} */
+
+.content button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: #fff;
+  color: #6a1b9a;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.content button:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  background: linear-gradient(45deg, #e8b2ff, #b1b1fb);
+  padding: 20px;
+  width: 100%;
+  border-radius: 25px;
+  /* opacity: 0.8; */
+}
+
+.contacts div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+/* @media screen and (max-width: 768px) {
+  .box {
+    height: 300px;
+  }
+
+  .box_content {
+    margin-inline-start: 5%;
+  }
+
+  .box_content h2 {
+    font-size: 25px;
+  }
+
+  .box_content h1,
+  p {
+    font-size: 40px;
+  }
+
+  .img {
+    width: 200px;
+    margin-right: 80px;
+  }
+
+  .follows_box {
+    width: 20%;
+    top: 60%;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  .header_container {
+    text-align: center;
+  }
+  .box {
+    height: 700px;
+  }
+
+  .box_content h2 {
+    font-size: 15px;
+  }
+
+  .box_content h1 {
+    font-size: 20px !important;
+  }
+
+  .box_content p {
+    font-size: 15px !important;
+  }
+
+  .circle {
+    margin: 0 auto;
+    margin-top: 140%;
+    margin-left: -25%;
+  }
+
+  .img {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .follows_box {
+    width: 40%;
+    top: 85%;
+    height: 100px;
+    left: -30px;
+  }
 }

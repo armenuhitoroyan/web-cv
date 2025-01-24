@@ -1,0 +1,71 @@
+.container {
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.text_container {
+  width: 50%;
+}
+.container p {
+  font-size: 16px;
+
+  color: #808080;
+}
+
+.container h3 {
+  font-size: 32px;
+}
+
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container h3 {
+  text-align: start;
+}
+
+.rules {
+  width: 50%;
+}
+
+.rules ul li {
+  list-style-type: square !important;
+  text-align: start !important;
+  padding-top: 14px;
+}
+
+.rules ul li::marker {
+  color: #6928e6 !important;
+}
+
+.rules ul li span {
+  color: #555 !important;
+  position: relative;
+  font-size: 16px;
+  width: 100% !important;
+}
+
+/* Image */
+
+.image img {
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 85%;
+  margin-bottom: 70px;
+}
+
+.image_context img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image_context:hover .image_context img {
+  transform: scale(1.2) rotate(10deg); /* Ավելացնում է ռոտացիա խոշորացման էֆեկտին */
+  cursor: pointer;
+}

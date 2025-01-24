@@ -5,11 +5,20 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   color?: string;
+  width?: string;
+  height?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, className, color }) => (
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  className,
+  color,
+  width,
+  height,
+}) => (
   <button
-    style={{ color: color, borderColor: color, padding: "10px" }}
+    style={{ color, borderColor: color, padding: "10px", width, height }}
     className={className}
     onClick={onClick}
   >

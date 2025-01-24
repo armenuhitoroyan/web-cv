@@ -40,6 +40,10 @@
   visibility: visible;
 }
 
+.list li select option {
+  background-color: transparent !important;
+}
+
 @media (max-width: 767px) {
   .header {
     visibility: hidden;

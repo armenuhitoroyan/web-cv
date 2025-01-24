@@ -7,12 +7,16 @@ interface DownloadProps {
   download?: string; // ֆայլի անվանումը
 
   color?: string;
+  width?: string;
+  height?: string;
 }
 
 const Download: React.FC<DownloadProps> = ({
   text,
   href,
   download,
+  width,
+  height,
 
   color = "#000",
 }) => (
@@ -23,6 +27,8 @@ const Download: React.FC<DownloadProps> = ({
       style={{
         color: color,
         borderColor: color,
+        width: width,
+        height: height,
       }}
     >
       <svg

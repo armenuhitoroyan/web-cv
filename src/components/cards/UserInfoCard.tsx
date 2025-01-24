@@ -10,15 +10,20 @@ const UserInfoCard: React.FC<UserInfoCardProps> = ({
   IconComponent,
   title,
   text,
-}) => {  
+}) => {
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center gap-x-4">
+    <div
+      style={{ border: "4px #7b2ff7" }}
+      className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center gap-x-4"
+    >
       <div className="shrink-0">
-        {IconComponent && <IconComponent style={{ color: "white" }} />}
+        {IconComponent && <IconComponent style={{ color: "#000" }} />}
       </div>
       <div>
         <div className="text-xl font-medium text-black">{title}</div>
-        <p className="text-slate-500">{text}</p>
+        <p style={{ fontSize: "15px" }} className="text-slate-500">
+          {text}
+        </p>
       </div>
     </div>
   );

@@ -1,29 +1,46 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Բեռնում ենք Link-ը react-router-dom-ից
 import image from "../assets/images/afsu-logo.png";
 import Download from "./form/Download";
 import styles from "../style/Navbar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const path = e.target.value;
+    navigate(path);
+  };
   return (
     <div
       className={`w-full  flex items-center justify-center md:flex-row gap-20 ${styles.header}`}
     >
       <img src={image} alt="logo not found!" />
       <nav style={{ padding: "1rem", color: "white" }}>
-        <ul style={{ listStyleType: "none", display: "flex", gap: "1rem" }}>
+        <ul
+          className={styles.list}
+          style={{ listStyleType: "none", display: "flex", gap: "1rem" }}
+        >
           <li>
-            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-              Home
-            </Link>
+            <select
+              style={{ background: "transparent", border: "none" }}
+              onChange={handleChange}
+              className="select-dropdown"
+            >
+              <option value="/">Home</option>
+              <option value="/index-4">Home 4 (Light)</option>
+              <option value="/index-4-dark">Home 4 (Dark)</option>
+            </select>
           </li>
           <li>
-            <Link
-              to="/service"
-              style={{ color: "white", textDecoration: "none" }}
+            <select
+              style={{ background: "transparent", border: "none" }}
+              onChange={handleChange}
+              className="select-dropdown"
             >
-              Service
-            </Link>
+              <option value="/service">Services</option>
+              <option value="/services-details">Services Details</option>
+            </select>
           </li>
           <li>
             <Link
@@ -39,12 +56,14 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/about"
-              style={{ color: "white", textDecoration: "none" }}
+            <select
+              style={{ background: "transparent", border: "none" }}
+              onChange={handleChange}
+              className="select-dropdown"
             >
-              About
-            </Link>
+              <option value="/about">About</option>
+              <option value="/404">Error</option>
+            </select>
           </li>
           <li>
             <Link

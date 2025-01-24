@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style/HomePage.module.css"
+import styles from "../style/HomePage.module.css";
 
 interface TitleContainerProps {
   title: string;
@@ -11,11 +11,13 @@ const TitleContainer: React.FC<TitleContainerProps> = ({
   description,
 }) => {
   return (
-    <div className={`w-full flex-col justify-center md:flex-colum ${styles.title}`}>
+    <div
+      className={`w-full flex-col justify-center md:flex-colum ${styles.title}`}
+    >
       <div>
         <img
           style={{ width: "50px", position: "static", margin: "0 auto" }}
-          src="../../images/dots-1.png"
+          src="src/assets/images/dots-1.png"
           alt="dots-1"
         />
       </div>
