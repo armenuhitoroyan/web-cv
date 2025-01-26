@@ -1,6 +1,5 @@
 import React from "react";
 import user from "../../assets/images/630.png";
-import Button from "../form/Button";
 import styles from "../../style/HomePage.module.css";
 
 // Տիպերի սահմանում
@@ -72,11 +71,9 @@ const Header: React.FC = () => {
               style={{ height: "70px", width: "70%" }}
               className="flex flex-col freelance-available justify-center md:flex-row"
             >
-              <Button
-                text="Select Now"
-                className="rounded-button"
-                onClick={() => console.log("Our Blog Page")}
-              />
+              <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+                Select Now
+              </button>
               <ul>
                 <li>Available for Freelance</li>
               </ul>

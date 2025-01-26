@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style/BlogPage.module.css"
+import styles from "../style/BlogDetails2.module.css"
 
 type PostedCardProps = {
   text: string;
@@ -13,7 +13,7 @@ const PostedCard: React.FC<PostedCardProps> = ({
   textAlign = "left",
 }) => {
   return (
-    <div className={styles.card} style={{ textAlign }}>
+    <div  className={styles.card} style={{ textAlign }}>
       <h2>{text}</h2>
       <a href="#">{content}</a>
     </div>

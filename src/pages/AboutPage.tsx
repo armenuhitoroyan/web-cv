@@ -3,7 +3,7 @@ import styles from "../style/AboutPage.module.css";
 import Footer from "../components/footer/Footer";
 import Carousel from "../components/Carousel";
 import ParticlesContainer from "../components/ParticlesContainer";
-import bgImage from "../assets/images/bgimg.jpg";
+import bgImage from "../assets/images/fog.png";
 import AuthorInfo from "../components/AuthorInfo";
 import ResumeComponent from "../components/Resume";
 

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../style/ServicesDetails.module.css";
 import Footer from "../components/footer/Footer";
 import ParticlesContainer from "../components/ParticlesContainer";
-import bgImage from "../assets/images/bgimg.jpg";
+import bgImage from "../assets/images/fog.png";
 import ImageModel from "../components/ImageModel";
 
 const Servicedetails: React.FC = () => {

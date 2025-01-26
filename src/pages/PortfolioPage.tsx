@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../style/PortfolioPage.module.css";
-import bgImage from "../assets/images/bgimg.jpg";
+import bgImage from "../assets/images/fog.png";
 import Footer from "../components/footer/Footer";
 import ParticlesContainer from "../components/ParticlesContainer";
 import Details from "../components/Details";

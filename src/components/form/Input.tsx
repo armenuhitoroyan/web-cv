@@ -17,7 +17,8 @@ const Input: React.FC<InputProps> = ({
   onChange,
   error,
 }) => (
-  <input // w-full flex-col flex justify-center md:flex-row
+  <input
+    // w-full flex-col flex justify-center md:flex-row
     type={type}
     placeholder={placeholder}
     name={name}

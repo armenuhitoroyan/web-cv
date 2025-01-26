@@ -1,0 +1,313 @@
+.container {
+  font-family: Sans-Serif;
+  text-align: start;
+}
+
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container p,
+span {
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal !important;
+}
+
+.blog_content {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.blog_content img {
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.profile_img {
+  width: 50px !important;
+  height: auto !important;
+  border-radius: 50% !important;
+}
+
+.author_info {
+  margin-top: 40px !important;
+  margin-left: 10px;
+}
+
+.blog_data h2 {
+  font-size: 50px !important;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: start;
+}
+
+.advice {
+  padding: 5%;
+  border: 3px solid #9539f0;
+  border-radius: 20px;
+  margin-top: 5%;
+}
+.advice h4 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.advice span {
+  color: black;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+.image_container {
+  width: 100px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #9539f0;
+  padding: 10px;
+}
+
+.image_container img {
+  margin-bottom: 30px;
+}
+
+.blog_p {
+  margin: 0 auto;
+  margin-top: 30px !important;
+}
+
+.bullet_list {
+  margin-top: 20px !important;
+}
+.bullet_list li {
+  list-style-type: square !important;
+  margin-top: 15px !important;
+  color: #9539f0 !important;
+}
+
+.bullet_list span {
+  color: #808080 !important;
+  font-weight: bolder !important;
+}
+
+/* Design */
+
+.design_container {
+  border: 3px solid #6928e6;
+  border-radius: 25px;
+  text-align: justify;
+  padding: 25px 20px;
+  margin-top: 25px;
+}
+
+.design_container div {
+  width: 50;
+}
+
+.design_container span {
+  color: #6928e6;
+  font-size: "20px";
+  font-weight: bold;
+}
+
+.design_container a {
+  margin-left: 10px;
+  color: #1c1b1b !important;
+}
+
+.design_container a:hover {
+  text-decoration: underline;
+}
+
+.design_container div :last-child {
+  display: flex;
+  margin-left: 12%;
+}
+
+.page_icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Card */
+
+.card {
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.card a {
+  color: #6928e6;
+  font-weight: bolder;
+}
+
+.posted_card div {
+  width: 100% !important;
+}
+
+/* Comment */
+.comment {
+  border: 3px solid #6928e6;
+  border-radius: 20px;
+  padding-left: 30px;
+}
+
+.comment img {
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.comment div > :first-child {
+  margin-left: 15px;
+}
+
+.title_comment {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 30px !important;
+  text-align: start;
+  font-weight: bold !important;
+}
+.add_comment {
+  margin-top: 50px;
+}
+
+.add_comment div > :last-child {
+  width: 95%;
+  margin-left: 5%;
+}
+
+.about_author {
+  border: 3px solid #6928e6;
+  border-radius: 20px;
+  padding: 20px 25px;
+  background: linear-gradient(90deg, #4219dc, #973af1);
+  color: white;
+  text-align: start;
+}
+
+.about_author span {
+  color: white;
+  font-weight: 900;
+}
+
+.about_author img {
+  margin: 0 auto;
+}
+
+.about_author h2 {
+  font-size: 26px;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.about_author span {
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 900 !important;
+}
+
+.categories {
+  width: 100% !important;
+  padding-top: 30px !important;
+  margin-right: 5%;
+}
+
+.link:hover {
+  background-color: #4219dc !important;
+}
+
+.categories h2 {
+  font-size: 22px;
+}
+
+/* News */
+
+.news_container {
+  padding-top: 10px;
+}
+
+.news_container img {
+  border-radius: 10px;
+}
+
+.news_container h4 {
+  color: #6928e6;
+  font-size: 16px;
+}
+
+.news_container a {
+  font-weight: bold;
+  color: #1c1b1b;
+}
+
+.divider a {
+  color: #1c1b1b !important;
+}
+
+.divider img {
+  border-radius: 10px !important;
+}
+
+/* Our Blog page */
+.post {
+  width: 100%;
+}
+
+.blog_content button {
+  margin-top: 30px;
+}
+
+.post span,
+h6 {
+  color: #1c1b1b !important;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.blog_paragraph {
+  font-weight: normal !important;
+  margin-top: 20px !important;
+}
+
+.blog_paragraph h2 {
+  font-weight: bolder !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Pagination */
+
+.next :hover,
+.prev :hover {
+  color: white !important;
+}
+
+.next,
+.prev {
+  width: 100px;
+  height: 50px;
+  color: white !important;
+}
+
+.next span,
+.prev span {
+  text-align: center !important;
+}

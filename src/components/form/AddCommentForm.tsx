@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Input from "./Input";
-import Button from "./Button";
 import TextArea from "./TextArea";
 
 type FormData = {
@@ -120,7 +119,9 @@ const AddCommentForm: React.FC<AddCommentProps> = ({ onAdd }) => {
         </div>
 
         <div className="w-full flex-col flex justify-start md:flex-row">
-          <Button text="Post comment" />
+          <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+            Post comment
+          </button>
         </div>
       </div>
     </form>

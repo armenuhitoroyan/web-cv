@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "./form/Button";
-import styles from "../style/BlogPage.module.css"
+import styles from "../style/BlogDetails2.module.css";
 
 interface BlogDataProps {
   img: string;
@@ -24,25 +23,29 @@ const BlogData: React.FC<BlogDataProps> = ({
   pSize = "16px",
 }) => {
   return (
-    <div className={styles.blog_data}>
+    <div className={`flex flex-col justify-start ${styles.blog_data}`}>
       <img src={img} alt="Profile Page 1" />
-
       <div>
-        <p>{date}</p>
-        <img className={styles.profile_image} src={profileImg} alt="Author" />
-        <p>{author}</p>
+        <span>Digital Marketing, Marketing</span>
+        <h2 style={{ fontSize: h2Size }}>{title}</h2>
+        <div className="flex">
+          <div>
+            <img className={styles.profile_img} src={profileImg} alt="Author" />
+          </div>
+          <div className={styles.author_info}>
+            <span style={{ color: "#6928e6", margin: "0px" }}>{date}</span>
+            <p style={{ margin: "0px", color: "#000" }}>{author}</p>
+          </div>
+        </div>
       </div>
 
       <div className={styles.blog_content}>
-        <h2 style={{ fontSize: h2Size }}>{title}</h2>
         <p style={{ fontSize: pSize }}>{text}</p>
-        <div className={styles.button_container}>
-          <Button
-            text="Select Now"
-            className="rounded-button"
-            onClick={() => console.log("Our Blog Page")}
-          />
-        </div>
+        {/* <div className={styles.button_container}>
+          <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+            Select Now
+          </button>
+        </div> */}
       </div>
     </div>
   );

@@ -28,6 +28,7 @@ const Navbar: React.FC = () => {
               className="select-dropdown"
             >
               <option value="/">Home</option>
+              <option value="/index-2">Home 2</option>
               <option value="/index-4">Home 4 (Light)</option>
               <option value="/index-4-dark">Home 4 (Dark)</option>
             </select>
@@ -43,17 +44,25 @@ const Navbar: React.FC = () => {
             </select>
           </li>
           <li>
-            <Link
-              to="/portfolio"
-              style={{ color: "white", textDecoration: "none" }}
+            <select
+              style={{ background: "transparent", border: "none" }}
+              onChange={handleChange}
+              className="select-dropdown"
             >
-              Portfolio
-            </Link>
+              <option value="/portfolio">Portfolio</option>
+              <option value="/portfolio-details">Portfolio Details</option>
+            </select>
           </li>
           <li>
-            <Link to="/blog" style={{ color: "white", textDecoration: "none" }}>
-              Blog
-            </Link>
+            <select
+              style={{ background: "transparent", border: "none" }}
+              onChange={handleChange}
+              className="select-dropdown"
+            >
+              <option value="/blog">Blog 1</option>
+              <option value="/our-blog">Our Blog </option>
+              <option value="/blog-details-2">Blog 2</option>
+            </select>
           </li>
           <li>
             <select
@@ -80,6 +89,7 @@ const Navbar: React.FC = () => {
         href="./assets/files/Armenuhi Toroyan CV.pdf"
         download="Armenuhi Toroyan CV.pdf"
         color="white"
+        width="200px"
       />
     </div>
   );

@@ -8,7 +8,6 @@ import {
   SlCursor,
 } from "react-icons/sl";
 import { FaRegFolder } from "react-icons/fa";
-import Button from "../../components/form/Button";
 import Download from "../../components/form/Download";
 import styles from "../../style/Home4.module.css";
 
@@ -84,11 +83,9 @@ export const AboutUser: React.FC<AboutUserProps> = ({ color }) => {
       <h1 className="text-3xl font-bold">Tohidur Hasan</h1>
       <p>Graphic Designer, HTML Coder, PHP Programmer and Project Manager</p>
       <div className="w-full flex flex-col md:flex-row justify-between items-center">
-        <Button
-          className="rounded-button"
-          text="Start consulting"
-          onClick={() => alert("Start consulting")}
-        />
+        <button className="bg-white text-purple-900 font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+          Start consulting
+        </button>
         <ul>
           <li>Available for Freelance</li>
         </ul>

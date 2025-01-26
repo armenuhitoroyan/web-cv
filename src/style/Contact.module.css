@@ -1,0 +1,71 @@
+.container {
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container .hading {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .hading p {
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+}
+
+.container .hading h2 {
+  width: 60%;
+  font-size: 50px;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Add User Form */
+
+.container input,
+.container textarea,
+.container select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  outline: none;
+  font-size: 16px;
+  height: 70px;
+  color: #ccc;
+  width: 100% !important;
+  margin-top: 20px;
+}
+
+.container textarea {
+  height: 150px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+.container select option {
+  background-color: white;
+  height: 50px !important;
+  color: #4219dc;
+}
+
+.container select option:hover {
+  background-color: #4219dc !important;
+  color: white;
+}
+
+.info {
+  width: 80%;
+  margin: 0 auto;
+}

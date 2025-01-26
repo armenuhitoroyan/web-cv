@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style/BlogPage.module.css";
+import styles from "../style/BlogDetails2.module.css";
 
 interface CommentProps {
   name: string;
@@ -15,7 +15,7 @@ const AddComment: React.FC<CommentProps> = ({
   aboutAuthor,
 }) => {
   return (
-    <div className={`flex ${styles.comment}`}>
+    <div className={`flex justify-center items-center ${styles.comment}`}>
       <img src={img} alt={`${img} not found!`} />
       <div className="comment-details">
         <div className="comment-header">

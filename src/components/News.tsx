@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../style/BlogPage.module.css";
+import styles from "../style/BlogDetails2.module.css";
 
 interface NewsProps {
   img: string;
@@ -9,7 +9,9 @@ interface NewsProps {
 
 const News: React.FC<NewsProps> = ({ img, date, title }) => {
   return (
-    <div className={styles.news_container}>
+    <div
+      className={`flex flex-col justify-between md:flex-row ${styles.news_container}`}
+    >
       <div>
         <img src={img} alt="Blog News" />
       </div>

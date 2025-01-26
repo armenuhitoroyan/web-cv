@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
-import ContactPage from "../pages/ContactPage";
 
 import ServicePage from "../pages/ServicePage";
 import PortfolioPage from "../pages/PortfolioPage";
@@ -11,15 +10,22 @@ import Navbar from "../components/Navbar";
 import ErrorPage from "../pages/pages/Error";
 import Servicedetails from "../pages/ServiceDetails";
 import Homepage4 from "../pages/Homepage/Home4";
+import Homepage2 from "../pages/Homepage/Home2";
+import Contact from "../pages/Contact";
+import BlogDetails2 from "../pages/Blog/BlogDetails2";
+import OurBlog from "../pages/Blog/OurBlog";
+import PortfolioDetails from "../pages/portfolio/PortfolioDetails";
 
 function AppRoutes(): JSX.Element {
   const hideNavbar =
     location.pathname === "/index-4" || location.pathname === "/index-4-dark";
   return (
     <Router>
-      {hideNavbar && <Navbar />}
+      <Navbar />
+      {/* {hideNavbar && <Navbar />} */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/index-2" element={<Homepage2 />} />
         <Route
           path="/index-4"
           element={<Homepage4 backgroundColor="white" color="#030718" />}
@@ -31,10 +37,13 @@ function AppRoutes(): JSX.Element {
         <Route path="/service" element={<ServicePage />} />
         <Route path="/services-details" element={<Servicedetails />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio-details" element={<PortfolioDetails />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/our-blog" element={<OurBlog />} />
+        <Route path="/blog-details-2" element={<BlogDetails2 />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/404" element={<ErrorPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

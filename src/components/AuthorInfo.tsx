@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../style/AboutPage.module.css";
-import Button from "./form/Button";
 import UserInfo from "./UserInfo";
 
 interface LogosProps {
@@ -116,11 +115,9 @@ const AuthorInfo: React.FC = () => {
             <div
               className={`${styles.button} w-full flex flex-col items-center`}
             >
-              <Button
-                text="Select Now"
-                className="rounded-button"
-                onClick={() => console.log("Our Blog Page")}
-              />
+              <button className="bg-white text-purple-900 font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+                Select Now
+              </button>
             </div>
             <div>
               <Pages size="40px" />

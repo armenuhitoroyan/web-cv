@@ -179,3 +179,44 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+/* Portfolio details */
+
+.flexRow {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 100%;
+}
+
+.leftContent {
+  width: 100%;
+  text-align: start;
+}
+
+.rightContent {
+  width: 100%;
+}
+
+.descriptionText {
+  width: 100% !important;
+  color: #808080;
+  font-size: 16px;
+  font-weight: normal !important;
+  margin: 0 auto !important;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.card {
+  width: 100% !important;
+  padding: 2%;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0px;
+}

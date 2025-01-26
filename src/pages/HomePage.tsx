@@ -11,7 +11,6 @@ import ResumeComponent from "../components/Resume";
 import Services from "../components/Services";
 import TitleContainer from "../components/Title";
 import ImageCard from "../components/cards/ImgCard";
-import Button from "../components/form/Button";
 import AddUserForm from "../components/form/AddUserForm";
 
 interface ArticleCardProps {
@@ -147,12 +146,10 @@ const HomePage: React.FC = () => {
               subtitle="Digital Web"
             />
           </div>
-          <Button
-            text="
-            Load more"
-            className="rounded-button"
-            onClick={() => console.log("Our Blog Page")}
-          />
+          <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+            Load more
+          </button>
+          Start consulting
           <ResumeComponent firstTitle="Education" secondTitle="Experience" />
           <div className="flex flex-col freelance-available justify-center gap-10 md:flex-row">
             <ArticleCard

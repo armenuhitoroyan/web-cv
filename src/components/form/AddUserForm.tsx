@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 import SelectOption from "./SelectOpt";
-import Button from "./Button";
+
 import TextArea from "./TextArea";
 
 type FormData = {
@@ -145,7 +145,9 @@ const AddUserForm: React.FC<AddUserProps> = ({ onAdd }) => {
         </div>
 
         <div className="w-full flex-col flex justify-start md:flex-row">
-          <Button text="Send Message" />
+          <button className="bg-white font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+            Send Message
+          </button>
         </div>
       </div>
     </form>

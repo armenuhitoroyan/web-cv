@@ -1,0 +1,349 @@
+.container {
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.context {
+  margin-bottom: 10%;
+  background-color: rgb(0, 0, 95);
+  border-bottom-left-radius: 20%;
+  padding-bottom: 5%;
+  padding-top: 13%;
+  color: white;
+  padding-left: 2.5px;
+}
+
+.context img {
+  border-radius: 20px;
+  width: auto;
+  height: 80%;
+}
+
+.context h2 {
+  font-size: 50px;
+  text-align: start;
+}
+
+.context p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+/* Services */
+
+.container section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.container section {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.container section h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 50px;
+  width: 50%;
+  height: 370px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.box1 {
+  width: 120px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  transform: rotate(90deg);
+}
+
+.box2 {
+  width: 120px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -150px;
+  margin-left: 25px;
+  color: white;
+}
+
+.skill_info {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-align: start !important;
+  padding-left: 5%;
+}
+
+.skill_info a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skill_info a:hover {
+  text-decoration: underline;
+}
+
+.skill_info p {
+  font-size: 14px;
+  color: #808080;
+  margin: 0 auto;
+}
+
+/* Carousel */
+
+.carousel_container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Հիմնական slide-ի style */
+.slide {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  opacity: 0.8;
+}
+
+.author_info {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 20;
+  border: 2px solid #6928e6;
+  top: 50%;
+  background-color: white;
+}
+
+.author_info h5 {
+  font-size: 20px;
+}
+
+.author_info span {
+  font-size: 14px;
+  color: #666;
+}
+
+.active {
+  transform: scale(1.2);
+  z-index: 10;
+  opacity: 1;
+}
+
+.inactive {
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+/* Package */
+
+.package_card {
+  /* background: linear-gradient(to bottom right, #6a11cb, #2575fc); */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+}
+
+.package_card :hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.package p {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.price {
+  width: 20%;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+}
+
+.skills {
+  color: #000 !important;
+  position: relative; /* կամ absolute, կամ fixed */
+  margin-top: 150px;
+  z-index: 5;
+}
+
+.creative {
+  border-radius: 20px;
+  height: 400px;
+  color: white;
+}
+
+.creative h2 {
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+.creative p {
+  font-size: 16px;
+  text-align: center !important;
+}
+.creative button {
+  margin-top: 20px;
+}
+
+/* Work Experience */
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem;
+  background: linear-gradient(to right, #e0eaff, #f6f0ff);
+  border-radius: 1rem;
+  margin-top: 70px;
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c63ff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.timelineLine {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 4px;
+  background-color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.timelinePoint {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ccc;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timelinePoint.active {
+  background-color: #6c63ff;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navButton {
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid #6c63ff;
+  cursor: pointer;
+  color: #6c63ff;
+  transition: color 0.3s ease;
+  width: 50px;
+}
+
+.navButton:hover {
+  color: #333;
+}
+
+.contentCard {
+  flex: 1;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+}
+
+.yearRange {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c63ff;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+}
