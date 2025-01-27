@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
             >
               <option value="/">Home</option>
               <option value="/index-2">Home 2</option>
+              <option value="/index-3">Home 3</option>
               <option value="/index-4">Home 4 (Light)</option>
               <option value="/index-4-dark">Home 4 (Dark)</option>
             </select>
@@ -51,6 +52,7 @@ const Navbar: React.FC = () => {
             >
               <option value="/portfolio">Portfolio</option>
               <option value="/portfolio-details">Portfolio Details</option>
+              <option value="/portfolio-details2">Portfolio Details 2</option>
             </select>
           </li>
           <li>
@@ -72,6 +74,7 @@ const Navbar: React.FC = () => {
             >
               <option value="/about">About</option>
               <option value="/404">Error</option>
+              <option value="/pricing-plans">Pricing Plans</option>
             </select>
           </li>
           <li>

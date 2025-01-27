@@ -15,6 +15,9 @@ import Contact from "../pages/Contact";
 import BlogDetails2 from "../pages/Blog/BlogDetails2";
 import OurBlog from "../pages/Blog/OurBlog";
 import PortfolioDetails from "../pages/portfolio/PortfolioDetails";
+import HomePage3 from "../pages/Homepage/Home3";
+import PricingPlans from "../pages/pages/PricingPlans";
+import PortfolioDetails2 from "../pages/portfolio/Profiledetails2";
 
 function AppRoutes(): JSX.Element {
   const hideNavbar =
@@ -26,6 +29,7 @@ function AppRoutes(): JSX.Element {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/index-2" element={<Homepage2 />} />
+        <Route path="/index-3" element={<HomePage3 />} />
         <Route
           path="/index-4"
           element={<Homepage4 backgroundColor="white" color="#030718" />}
@@ -38,11 +42,13 @@ function AppRoutes(): JSX.Element {
         <Route path="/services-details" element={<Servicedetails />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/portfolio-details" element={<PortfolioDetails />} />
+        <Route path="/portfolio-details2" element={<PortfolioDetails2 />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/our-blog" element={<OurBlog />} />
         <Route path="/blog-details-2" element={<BlogDetails2 />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/404" element={<ErrorPage />} />
+        <Route path="/pricing-plans" element={<PricingPlans />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

@@ -395,7 +395,7 @@ const Homepage2: React.FC = () => {
             </div>
           </div>
         </div>
-        <button className="bg-white text-purple-900 font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+        <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
           Load more
         </button>
       </div>

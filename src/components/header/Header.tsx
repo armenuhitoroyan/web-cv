@@ -1,21 +1,13 @@
 import React from "react";
 import user from "../../assets/images/630.png";
 import styles from "../../style/HomePage.module.css";
+import { Circle } from "lucide-react";
 
 // Տիպերի սահմանում
 
 interface CountFollwersProps {
   title: string;
   text: string;
-}
-
-interface CircleProps {
-  width?: string;
-  height?: string;
-  borderPx?: string;
-  color?: string;
-  top?: string;
-  left?: string;
 }
 
 // Կոմպոնենտներ
@@ -27,28 +19,6 @@ const CountFollwers: React.FC<CountFollwersProps> = ({ title, text }) => {
       <h2 className="font-bold ">{title}</h2>
       <p>{text}</p>
     </div>
-  );
-};
-
-const Circle: React.FC<CircleProps> = ({
-  width = "70px",
-  height = "70px",
-  borderPx = "5px",
-  color = "#000",
-  top = "0px",
-  left = "0px",
-}) => {
-  return (
-    <div
-      className={styles.circle}
-      style={{
-        width: width,
-        height: height,
-        border: `${borderPx} solid ${color}`,
-        top: top,
-        left: left,
-      }}
-    ></div>
   );
 };
 
@@ -82,8 +52,20 @@ const Header: React.FC = () => {
            
               <div>Animation Component</div>
             </div> */}
-            <div>
-              <Circle color="yellow" left="50%" top="0px" />
+            <div
+              style={{
+                marginLeft: "100%",
+                marginTop: "-41%",
+                position: "relative",
+                zIndex: 7,
+              }}
+            >
+              <Circle
+                width="70px"
+                height="70px"
+                strokeWidth={3}
+                color="yellow"
+              />
             </div>
             <div style={{ fontSize: "24px" }}>
               <CountFollwers title="10K" text="Happy Satisfied Customer" />

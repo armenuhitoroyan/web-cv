@@ -1,0 +1,211 @@
+/* Տառատեսակը */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@keyframes rotateAndResize {
+  0% {
+    width: 300dvh;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    width: 250px;
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    width: 250px;
+    transform: rotate(360deg);
+    opacity: 0; /* Hide the image */
+  }
+}
+
+.container {
+  width: 100%;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.container ul li {
+  color: white;
+}
+
+/* Header */
+
+.header_container {
+  background: linear-gradient(45deg, #eecffc, #c8c8f9);
+}
+
+.box_content {
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-inline-start: 5%;
+  margin-block-end: 20%;
+  text-align: start;
+  margin-top: 25%;
+  height: 145px !important;
+}
+
+.box_content span {
+  font-weight: bold;
+  margin: 0px !important;
+}
+
+.box_content span,
+p {
+  color: #555 !important;
+}
+
+.box_content h2 {
+  font-size: 50px !important;
+  text-align: start;
+  margin: 0px !important;
+  margin-top: 25%;
+}
+
+.box_content h6 {
+  font-size: 20px;
+  margin: 0px !important;
+}
+
+.box_content h3 {
+  font-size: 450px;
+  position: absolute;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  left: 30%;
+  bottom: -20%;
+  z-index: 0;
+}
+
+.box_content a {
+  font-size: 26px;
+  color: #6928e6;
+  margin: 0px !important;
+  top: 20px !important;
+}
+
+.box_content h1,
+p {
+  /* margin-top: 40px; */
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 60px;
+  margin: 0px !important;
+}
+
+.box_content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.img {
+  width: 600px !important;
+  margin: 0 auto !important;
+  margin-top: 100px !important;
+  margin-left: -200px !important;
+  position: absolute;
+  z-index: 4;
+}
+
+.dots {
+  position: relative;
+  width: 75%;
+  z-index: 3;
+  margin-top: 220px;
+  margin-left: 70px;
+}
+
+.user_info img {
+  width: 70% !important;
+  border-radius: 20px !important;
+}
+
+.user_info ul {
+  width: 100%;
+}
+
+.user_info ul li {
+  margin-top: 0.1px !important;
+}
+
+.image_container {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease;
+  box-shadow: 0.5s ease;
+  border-radius: 15px;
+}
+
+.image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image_container :hover .image_container img {
+  transform: scale(1.2) rotate(10deg); /* Ավելացնում է ռոտացիա խոշորացման էֆեկտին */
+  cursor: pointer;
+}
+
+.contacts div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content button:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  background: linear-gradient(45deg, #f1d5fd, #cdcdfc);
+  padding: 20px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.form p {
+  color: red !important;
+}
+
+.advice {
+  padding: 5%;
+  border: 3px solid #9539f0;
+  border-radius: 20px;
+  margin-top: 5%;
+}
+.advice h4 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.advice span {
+  color: black;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+.image_container {
+  width: 70px;
+  height: auto;
+  border-radius: 15px;
+  background-color: #9539f0;
+  padding: 30px;
+}
+
+.image_container img {
+  width: 50px !important;
+}
+
+.image_container h2 {
+  font-size: 26px !important;
+}

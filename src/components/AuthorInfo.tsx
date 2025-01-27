@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../style/AboutPage.module.css";
 import UserInfo from "./UserInfo";
+import Skills from "./Skills";
 
 interface LogosProps {
   className: string;
@@ -9,10 +10,6 @@ interface LogosProps {
 }
 interface PagesProps {
   size: string;
-}
-interface SkillCardProps {
-  percentage: number;
-  skill: string;
 }
 
 const Logos: React.FC<LogosProps> = ({ backgroundColor, size, className }) => {
@@ -62,42 +59,6 @@ const Pages: React.FC<PagesProps> = ({ size }) => {
   );
 };
 
-const SkillCard: React.FC<SkillCardProps> = ({ percentage, skill }) => {
-  return (
-    <div className={`${styles.skill_card}`}>
-      <h2 className="text-3xl font-bold">{percentage}%</h2>
-      <p>{skill}</p>
-      <div>
-        <div
-          className={styles.skills_progress}
-          style={{ width: `${percentage}%` }}
-        ></div>
-      </div>
-    </div>
-  );
-};
-
-const Skills: React.FC = () => {
-  const skills = [
-    { percentage: 50, skill: "Graphic Design" },
-    { percentage: 75, skill: "Development" },
-    { percentage: 38, skill: "Marketing Ideas" },
-    { percentage: 63, skill: "Web Management" },
-  ];
-
-  return (
-    <div className={styles.skills}>
-      {skills.map((item, index) => (
-        <SkillCard
-          key={index}
-          percentage={item.percentage}
-          skill={item.skill}
-        />
-      ))}
-    </div>
-  );
-};
-
 const AuthorInfo: React.FC = () => {
   return (
     <div
@@ -115,7 +76,7 @@ const AuthorInfo: React.FC = () => {
             <div
               className={`${styles.button} w-full flex flex-col items-center`}
             >
-              <button className="bg-white text-purple-900 font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+              <button className="bg-white font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
                 Select Now
               </button>
             </div>
@@ -183,7 +144,7 @@ const AuthorInfo: React.FC = () => {
           className={`w-full flex flex-col items-center justify-center md:flex-row`}
         >
           <div style={{ width: "100%" }}>
-            <Skills />
+            <Skills isGridLayout={true} />
           </div>
         </div>
       </div>

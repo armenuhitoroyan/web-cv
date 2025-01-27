@@ -1,0 +1,29 @@
+.container {
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.container ul li :first-child {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.creative {
+  border-radius: 20px;
+  height: 400px;
+  color: white;
+}
+
+.creative h2 {
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+.creative p {
+  font-size: 16px;
+  text-align: center !important;
+}
+.creative button {
+  margin-top: 20px;
+}

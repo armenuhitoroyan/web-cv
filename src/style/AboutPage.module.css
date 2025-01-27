@@ -119,11 +119,17 @@ span {
   background: linear-gradient(to right, #6928e6, #973af1);
 }
 
-.skills {
+.grid_layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 սյուն */
   gap: 10px; /* Տարածություն տողերի և սյուների միջև */
   margin-top: 1%;
+}
+
+.inline_layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* Resume */

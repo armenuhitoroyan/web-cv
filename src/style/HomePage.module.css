@@ -335,11 +335,15 @@ p {
 }
 
 .form {
-  background: linear-gradient(45deg, #e8b2ff, #b1b1fb);
+  background: linear-gradient(45deg, #f1d5fd, #cdcdfc);
   padding: 20px;
   width: 100%;
   border-radius: 25px;
   /* opacity: 0.8; */
+}
+
+.form p {
+  color: red !important;
 }
 
 .contacts div {

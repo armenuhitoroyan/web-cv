@@ -106,14 +106,16 @@ export const ProfileCard: React.FC = () => {
       </div>
       <div>
         <h3>Tohidur Hasan</h3>
-        <p>Graphic Designer, HTML Coder, and Project Manager</p>
+        <p style={{ color: "white" }}>
+          Graphic Designer, HTML Coder, and Project Manager
+        </p>
         <div className={styles.button}>
           <Download
             text="Download CV"
             href="/files/Armenuhi Toroyan CV.pdf"
             download="Armenuhi Toroyan CV.pdf"
             color="#white"
-            width="100%"
+            width="300px"
           />
         </div>
       </div>
