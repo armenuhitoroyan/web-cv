@@ -8,6 +8,7 @@ import Input from "../../components/form/Input";
 import News from "../../components/News";
 
 import Category from "../../components/Categories";
+import { useTitle } from "../../hooks/useTitle";
 
 const Pagination: React.FC = () => {
   return (
@@ -89,6 +90,7 @@ const Pagination: React.FC = () => {
 };
 
 const OurBlog: React.FC = () => {
+  useTitle("Our Blog");
   return (
     <div
       className={`w-full  flex-col items-center justify-center md:flex-row ${styles.container}`}

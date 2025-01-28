@@ -10,6 +10,7 @@ import NextItem from "../components/NextItem";
 import FeatureContainer from "../components/FeautureContainer";
 import Download from "../components/form/Download";
 import { CalendarIcon, InfoIcon, LayersIcon, TagIcon } from "lucide-react";
+import { useTitle } from "../hooks/useTitle";
 
 interface InfoCardProps {
   client: string;
@@ -99,6 +100,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
 };
 
 const PortfolioPage: React.FC = () => {
+  useTitle("Portfolio Details 1"); // 
   return (
     <div
       className={`${styles.container} w-full flex-col items-center justify-center md:flex-row`}

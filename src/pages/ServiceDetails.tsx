@@ -4,8 +4,10 @@ import Footer from "../components/footer/Footer";
 import ParticlesContainer from "../components/ParticlesContainer";
 import bgImage from "../assets/images/fog.png";
 import ImageModel from "../components/ImageModel";
+import { useTitle } from "../hooks/useTitle";
 
 const Servicedetails: React.FC = () => {
+  useTitle("Services Details"); 
   return (
     <div
       className={`${styles.container} w-full  flex-col items-center justify-center md:flex-row`}

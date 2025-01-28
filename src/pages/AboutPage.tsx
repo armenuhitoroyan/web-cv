@@ -6,8 +6,10 @@ import ParticlesContainer from "../components/ParticlesContainer";
 import bgImage from "../assets/images/fog.png";
 import AuthorInfo from "../components/AuthorInfo";
 import ResumeComponent from "../components/Resume";
+import { useTitle } from "../hooks/useTitle";
 
 const AboutPage: React.FC = () => {
+  useTitle("About");
   return (
     <div className={styles.container}>
       <ParticlesContainer title="About Us" ref="about" img={bgImage} />

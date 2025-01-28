@@ -7,8 +7,11 @@ import bgImage from "../assets/images/home-2.jpg";
 import Map from "../components/MapComponent";
 import ContactsCard from "../components/cards/ContactsCard";
 import AddUserForm from "../components/form/AddUserForm";
+import { useTitle } from "../hooks/useTitle";
 
 const Contact: React.FC = () => {
+  useTitle("Contact Us");
+
   const handleAddUser = (formData: {
     name: string;
     email: string;

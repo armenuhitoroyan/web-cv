@@ -10,6 +10,7 @@ import UserInfoCard from "../../components/cards/UserInfoCard";
 import AddUserForm from "../../components/form/AddUserForm";
 import { HiMiniEnvelope, HiMiniMapPin, HiPhone } from "react-icons/hi2";
 import Skills from "../../components/Skills";
+import { useTitle } from "../../hooks/useTitle";
 
 const images = [
   {
@@ -86,6 +87,7 @@ const categories = [
 ];
 
 const HomePage3: React.FC = () => {
+  useTitle("Home 3"); // Նոր վերնագիր՝ "Home"
   const [activeCategory, setActiveCategory] = useState("all");
   const filteredImages = images.filter((image) => {
     if (activeCategory === "all") return true;
@@ -277,7 +279,7 @@ const HomePage3: React.FC = () => {
                         className="text-black text-3xl font-bold  hover:underline hover:text-black"
                       >
                         {image.title}
-                      </a> 
+                      </a>
                     </h3>
                     <h6
                       style={{ margin: "0 auto" }}

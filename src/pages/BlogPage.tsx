@@ -13,8 +13,10 @@ import AddCommentForm from "../components/form/AddCommentForm";
 import Input from "../components/form/Input";
 import News from "../components/News";
 import Category from "../components/Categories";
+import { useTitle } from "../hooks/useTitle";
 
 const BlogPage: React.FC = () => {
+  useTitle("Blog Details 1");
   const handleAddComment = (formData: {
     name: string;
     email: string;

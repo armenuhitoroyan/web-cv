@@ -50,9 +50,9 @@ const Services: React.FC = () => {
     >
       <div className={styles.card}>
         {info.map((data, index) => (
-          <div className="flex justify-center">
+          <div key={index} className="flex justify-center">
             <ContactCard
-              key={index}
+              // key={index}
               icon={data.icon}
               title={data.title}
               description={data.description}

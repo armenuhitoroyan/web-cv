@@ -10,6 +10,7 @@ import {
 import { FaRegFolder } from "react-icons/fa";
 import Download from "../../components/form/Download";
 import styles from "../../style/Home4.module.css";
+import { useTitle } from "../../hooks/useTitle";
 
 // import bgImg from "../../assets/images/images.jpg";
 
@@ -129,16 +130,13 @@ type Themes = {
 };
 
 export const Homepage4: React.FC<Themes> = ({ color, backgroundColor }) => {
+  useTitle("Home 4"); // Նոր վերնագիր՝ "Home"
   return (
     <div
       style={{
         backgroundColor,
         color,
         opacity: "0.8",
-        // backgroundImage: `url(${bgImg})`,
-        // backgroundRepeat: "no-repeat",
-        // backgroundSize: "cover",
-        // overflowY: "hidden",
       }}
       className={`${styles.container} w-full flex flex-col md:flex-row justify-between `}
     >

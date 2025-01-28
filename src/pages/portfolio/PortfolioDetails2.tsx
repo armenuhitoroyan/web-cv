@@ -7,6 +7,7 @@ import NextComponent from "../../components/NextComponent";
 import ImageModel from "../../components/ImageModel";
 import Download from "../../components/form/Download";
 import { TagIcon, InfoIcon, CalendarIcon, LayersIcon } from "lucide-react";
+import { useTitle } from "../../hooks/useTitle";
 
 interface InfoCardProps {
   client: string;
@@ -121,6 +122,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
 };
 
 const PortfolioDetails2: React.FC = () => {
+  useTitle("Portfolio Details 2"); //
   return (
     <div
       className={`${styles.container} w-full flex-col items-center  justify-center md:flex-row`}

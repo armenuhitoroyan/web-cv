@@ -10,6 +10,7 @@ import Carousel from "../../components/Carousel";
 import Slider from "react-slick";
 import Packages from "../../components/Package";
 import bgImg from "../../assets/images/fog.png";
+import { useTitle } from "../../hooks/useTitle";
 
 interface Service {
   title: string;
@@ -282,6 +283,7 @@ const Timeline = () => {
 };
 
 const Homepage2: React.FC = () => {
+  useTitle("Home 2"); // Նոր վերնագիր՝ "Home"
   return (
     <div
       className={`w-full  flex-col md:flex-col justify-between ${styles.container}`}

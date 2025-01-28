@@ -10,8 +10,10 @@ import PostedCard from "../../components/PostedCard";
 import AboutAuthor from "../../components/AboutAuthor";
 import AddComment from "../../components/AddComment";
 import AddCommentForm from "../../components/form/AddCommentForm";
+import { useTitle } from "../../hooks/useTitle";
 
 const BlogDetails2: React.FC = () => {
+  useTitle("Blog Details 2");
   const handleAddComment = (formData: {
     name: string;
     email: string;

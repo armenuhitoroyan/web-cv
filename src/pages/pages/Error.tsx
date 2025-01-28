@@ -3,8 +3,10 @@ import styles from "../../style/Error.module.css";
 import { PiSmileyXEyesFill } from "react-icons/pi";
 
 import WebSites from "../../components/footer/WebSites";
+import { useTitle } from "../../hooks/useTitle";
 
 const ErrorPage: React.FC = () => {
+  useTitle("404");
   useEffect(() => {
     (window as any).particlesJS("page404-container", {
       particles: {

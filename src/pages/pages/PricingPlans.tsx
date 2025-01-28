@@ -5,8 +5,10 @@ import styles from "../../style/PricingPlans.module.css";
 import Footer from "../../components/footer/Footer";
 import PricingCard from "../../components/PricingCard";
 import TitleContainer from "../../components/Title";
+import { useTitle } from "../../hooks/useTitle";
 
 export const PricingPlans: React.FC = () => {
+  useTitle("Pricing Plans");
   return (
     <div className={styles.container}>
       <ParticlesContainer title="About Us" ref="about" img={bgImage} />

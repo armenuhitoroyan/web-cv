@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import TitleContainer from "../components/Title";
 import ImageCard from "../components/cards/ImgCard";
 import AddUserForm from "../components/form/AddUserForm";
+import { useTitle } from "../hooks/useTitle";
 
 interface ArticleCardProps {
   image: string;
@@ -68,6 +69,8 @@ const Assessment: React.FC = () => (
 );
 
 const HomePage: React.FC = () => {
+  useTitle("Home"); // Նոր վերնագիր՝ "Home"
+
   const handleAddUser = (formData: {
     name: string;
     email: string;
