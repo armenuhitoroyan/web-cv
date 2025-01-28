@@ -1,16 +1,30 @@
 import React from "react";
 
-interface PricingCardProps {}
+interface PricingCardProps {
+  widthTop?: number;
+  widthBottom?: number;
+  height?: number;
+  marginLeft?: string;
+  marginTop?: string;
+  btnHeight?: number;
+}
 
-const PricingCard: React.FC<PricingCardProps> = () => {
+const PricingCard: React.FC<PricingCardProps> = ({
+  marginLeft,
+  marginTop,
+  widthBottom,
+  widthTop,
+  height,
+  btnHeight,
+}) => {
   return (
-    <div
-      style={{ width: "100%" }}
-      className="flex justify-center items-center min-h-screen bg-gray-100 p-4"
-    >
-      <div className=" flex-col md:flex-col max-w-4xl w-full gap-4">
+    <div className="w-full flex justify-start items-center min-h-screen p-4">
+      <div
+        style={{ width: `${widthBottom}%` }}
+        className=" flex-col md:flex-col max-w-4xl w-full gap-4"
+      >
         {/* Purple Card */}
-        <div className="w-full md:w-1/2 bg-indigo-900 rounded-3xl p-8 text-white">
+        <div className="  bg-indigo-900 rounded-3xl p-8 text-white">
           <h2 className="text-2xl font-semibold mb-2">Premium Package</h2>
           <div className="flex items-baseline mb-8">
             <span className="text-5xl font-bold">$350</span>
@@ -35,27 +49,55 @@ const PricingCard: React.FC<PricingCardProps> = () => {
 
         {/* White Card */}
         <div
-          style={{ marginTop: "-40px", width: "40%", marginLeft: "5%" }}
-          className="w-full md:w-1/2 bg-white rounded-3xl p-8 shadow-lg"
+          style={{
+            marginTop: `${marginTop}`,
+            width: `${widthTop}%`,
+            marginLeft: `${marginLeft}`,
+            height: `${height}px`,
+          }}
+          className="w-full bg-white rounded-3xl p-8 shadow-lg"
         >
           <div className="space-y-6">
             <div className="flex items-center">
               <div className="h-2 w-2 rounded-full bg-purple-500 mr-4"></div>
-              <span className="text-lg font-medium">Website Design</span>
+              <span
+                style={{ fontSize: "14px" }}
+                className="text-lg font-medium"
+              >
+                Website Design
+              </span>
             </div>
             <div className="flex items-center">
               <div className="h-2 w-2 rounded-full bg-purple-500 mr-4"></div>
-              <span className="text-lg font-medium">Graphic Designing</span>
+              <span
+                style={{ fontSize: "14px" }}
+                className="text-lg font-medium"
+              >
+                Graphic Designing
+              </span>
             </div>
             <div className="flex items-center">
               <div className="h-2 w-2 rounded-full bg-purple-500 mr-4"></div>
-              <span className="text-lg font-medium">Web Development</span>
+              <span
+                style={{ fontSize: "14px" }}
+                className="text-lg font-medium"
+              >
+                Web Development
+              </span>
             </div>
             <div className="flex items-center">
               <div className="h-2 w-2 rounded-full bg-purple-500 mr-4"></div>
-              <span className="text-lg font-medium">Business Consulting</span>
+              <span
+                style={{ fontSize: "14px" }}
+                className="text-lg font-medium"
+              >
+                Business Consulting
+              </span>
             </div>
-            <button className="w-full py-3 px-6 text-purple-600 font-medium border-2 border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-300 mt-6">
+            <button
+              style={{ height: `${btnHeight}px` }}
+              className="w-full  py-3 px-6  font-medium border-2 border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-300 mt-6"
+            >
               Select Now
             </button>
           </div>

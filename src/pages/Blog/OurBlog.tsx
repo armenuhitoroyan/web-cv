@@ -9,10 +9,9 @@ import News from "../../components/News";
 
 import Category from "../../components/Categories";
 
-
 const Pagination: React.FC = () => {
   return (
-    <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+    <div className="flex items-start justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       {/* Mobile Navigation */}
       <div className="flex flex-1 justify-between sm:hidden">
         <a

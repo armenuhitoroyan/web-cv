@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   };
   return (
     <div
-      className={`w-full  flex items-center justify-center md:flex-row gap-20 ${styles.header}`}
+      className={`w-full  flex items-center justify-center md:flex-row gap-5 ${styles.header}`}
     >
       <img src={image} alt="logo not found!" />
       <nav style={{ padding: "1rem", color: "white" }}>
@@ -27,7 +27,9 @@ const Navbar: React.FC = () => {
               onChange={handleChange}
               className="select-dropdown"
             >
-              <option value="/">Home</option>
+              <option  value="/">
+                Home
+              </option>
               <option value="/index-2">Home 2</option>
               <option value="/index-3">Home 3</option>
               <option value="/index-4">Home 4 (Light)</option>

@@ -42,6 +42,7 @@
 
 .list li select option {
   background-color: transparent !important;
+  color: black !important;
 }
 
 @media (max-width: 767px) {

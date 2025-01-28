@@ -17,7 +17,7 @@ import OurBlog from "../pages/Blog/OurBlog";
 import PortfolioDetails from "../pages/portfolio/PortfolioDetails";
 import HomePage3 from "../pages/Homepage/Home3";
 import PricingPlans from "../pages/pages/PricingPlans";
-import PortfolioDetails2 from "../pages/portfolio/Profiledetails2";
+import PortfolioDetails2 from "../pages/portfolio/PortfolioDetails2";
 
 function AppRoutes(): JSX.Element {
   const hideNavbar =

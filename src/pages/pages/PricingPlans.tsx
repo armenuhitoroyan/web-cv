@@ -10,16 +10,25 @@ export const PricingPlans: React.FC = () => {
   return (
     <div className={styles.container}>
       <ParticlesContainer title="About Us" ref="about" img={bgImage} />
-      <div style={{ width: "100%" }} className="flex flex-col md:flex-row">
-        <div style={{ width: "100%" }}>
-          <PricingCard />
-        </div>
-        <div style={{ width: "100%" }}>
-          <PricingCard />
-        </div>
-        <div style={{ width: "100%" }}>
-          <PricingCard />
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <PricingCard
+          marginTop="-40px"
+          marginLeft="5%"
+          widthBottom={100}
+          widthTop={90}
+        />
+        <PricingCard
+          marginTop="-40px"
+          marginLeft="5%"
+          widthBottom={100}
+          widthTop={90}
+        />
+        <PricingCard
+          marginTop="-40px"
+          marginLeft="5%"
+          widthBottom={100}
+          widthTop={90}
+        />
       </div>
       <div
         style={{ backgroundImage: `url(${bgImage})`, marginTop: "20px" }}
@@ -37,12 +46,26 @@ export const PricingPlans: React.FC = () => {
           description="Assignments Packages"
         />
       </div>
-      <div style={{ width: "100%" }} className="flex flex-col md:flex-row">
+      <div className="flex flex-col justify-center items-center md:flex-row">
         <div style={{ width: "100%" }}>
-          <PricingCard />
+          <PricingCard
+            marginLeft="70%"
+            marginTop="-30%"
+            widthBottom={60}
+            widthTop={70}
+            height={350}
+            btnHeight={70}
+          />
         </div>
         <div style={{ width: "100%" }}>
-          <PricingCard />
+          <PricingCard
+            marginLeft="70%"
+            marginTop="-30%"
+            widthBottom={60}
+            widthTop={70}
+            height={350}
+            btnHeight={70}
+          />
         </div>
       </div>
       <Footer />
