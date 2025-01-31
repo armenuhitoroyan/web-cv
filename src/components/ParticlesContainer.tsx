@@ -58,7 +58,7 @@ const ParticlesContainer: React.FC<ParticlesContainerProps> = ({
       }}
     >
       <h2>{title}</h2>
-      <div className="w-screen w-full  flex-col items-center justify-center md:flex-row">
+      <div className="w-full flex-col items-center justify-center lg:flex-row">
         <ul className="flex gap-10 justify-center">
           <li>
             <Link to="/">Home</Link>

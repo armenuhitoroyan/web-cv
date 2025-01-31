@@ -19,14 +19,13 @@ const Navbar: React.FC = () => {
   return (
     <div
       style={{
-        
         backgroundColor: isScrolled
           ? "rgba(255, 255, 255, 1)"
           : "rgba(255, 255, 255, 0.01)",
 
         marginTop: isScrolled ? "-2.2%" : "0px",
       }}
-      className={`w-screen flex items-center justify-center md:flex-row gap-20 ${styles.header}`}
+      className={`w-full  flex items-center justify-center lg:flex-row gap-10 ${styles.header}`}
     >
       <img
         src={

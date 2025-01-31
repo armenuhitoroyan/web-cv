@@ -71,12 +71,12 @@ p {
 }
 
 .box_content h3 {
-  font-size: 450px;
+  font-size: 400px;
   position: absolute;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  left: 30%;
-  bottom: -20%;
+  left: 35%;
+  bottom: -1%;
   z-index: 0;
 }
 

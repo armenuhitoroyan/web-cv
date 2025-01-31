@@ -29,8 +29,8 @@ const InfoCard: React.FC<InfoCardProps> = ({
   resources,
 }) => {
   return (
-    <div className={`${styles.card}  w-full  flex-col rounded-2xl md:flex-col`}>
-      <div className="space-y-6">
+    <div className={`${styles.card}  w-full  flex-col rounded-2xl lg:flex-col`}>
+      <div className="space-y-6 flex flex-col lg:flex-row">
         {/* Client */}
         <div className="flex items-start space-x-4">
           <InfoIcon
@@ -100,7 +100,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
 };
 
 const PortfolioPage: React.FC = () => {
-  useTitle("Portfolio Details 1"); // 
+  useTitle("Portfolio Details 1"); //
   return (
     <div
       className={`${styles.container} w-full flex-col items-center justify-center md:flex-row`}

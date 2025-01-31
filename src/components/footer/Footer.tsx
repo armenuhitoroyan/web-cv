@@ -5,7 +5,7 @@ import WebSites from "./WebSites";
 const Footer: React.FC = () => {
   return (
     <footer
-      className={`w-screen flex-col flex justify-center md:flex-column ${styles.container}`}
+      className={`flex-col flex justify-center md:flex-column ${styles.container}`}
     >
       <div className=" flex-col flex justify-center md:flex-row">
         <img

@@ -78,117 +78,7 @@ body {
   transition: opacity 0.5s ease-out;
 }
 
-/* Header */
-
-.header {
-  width: 100vw !important;
-}
-
-.header_container {
-  background: linear-gradient(90deg, #00003d, #010060);
-  border-bottom-left-radius: 115%;
-  border-bottom-right-radius: 170%;
-  margin-left: -14%;
-}
-
-.box {
-  height: 450px;
-  color: white;
-  margin: 0px;
-}
-
-.box_content {
-  color: white;
-  margin: 0 auto;
-  padding: 0 auto;
-  margin-inline-start: 7%;
-  margin-top: 4%;
-  text-align: start;
-  padding: 30px;
-}
-
-.box_content h2 {
-  font-size: 40px;
-  text-align: start;
-  margin: 0px;
-  margin-top: 25%;
-}
-
-.box_content h1 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 60px;
-  margin-block: 20px;
-}
-.box_content p {
-  font-size: 18px;
-  color: white !important;
-}
-
-.box_content ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.title_animation {
-  position: relative;
-  margin-inline-start: 160%;
-  z-index: 3;
-  width: 250px;
-  margin-top: 0;
-}
-
-.circle_box {
-  margin-left: 103%;
-  margin-top: -60%;
-  position: relative;
-  z-index: 7;
-}
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  margin-top: 12%;
-  margin-left: 8.5%;
-}
-
-.img {
-  border-radius: 50%;
-  width: 600px;
-  margin-top: 120px;
-  margin-right: 170px;
-}
-
-.follows_box {
-  width: 230px !important;
-  height: 180px;
-  background-color: white;
-  padding: 10px;
-  position: absolute;
-  top: 75%;
-  border-radius: 20px;
-  margin-inline-start: 40%;
-  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
-  z-index: 2;
-}
-
-.follows_box p {
-  color: black !important;
-  font-weight: bold;
-  line-height: 22px;
-  font-size: 16px;
-  text-align: center !important;
-}
-
-.follows_box h2 {
-  color: #6928e6;
-  font-size: 60px;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 5%;
-}
-
-/* Images */
+/* Card */
 
 .image_card {
   position: relative;
@@ -371,12 +261,27 @@ body {
   margin-bottom: 10px;
 }
 
+.title_animation {
+  position: relative;
+  margin-inline-start: 160%;
+  z-index: 3;
+  width: 250px;
+  margin-top: 0;
+}
+
+/* Media Queries */
 /* Header */
+
 .header_container {
+  margin: 0 auto;
   background: linear-gradient(90deg, #00003d, #010060);
   border-bottom-left-radius: 115%;
   border-bottom-right-radius: 170%;
-  margin-left: -14%;
+  height: 80vh;
+}
+
+.box_content p {
+  color: white !important;
 }
 
 .box {
@@ -390,28 +295,23 @@ body {
   margin: 0 auto;
   padding: 0 auto;
   margin-inline-start: 7%;
-  margin-top: 4%;
+  margin-block-end: 20%;
   text-align: start;
-  padding: 30px;
 }
 
 .box_content h2 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: start;
   margin: 0px;
   margin-top: 25%;
 }
 
-.box_content h1 {
+.box_content h1,
+p {
+  margin-top: 40px;
   font-family: "Poppins";
   font-weight: 800;
   font-size: 60px;
-  margin-block: 20px;
-}
-
-.box_content p {
-  font-size: 18px;
-  color: white !important;
 }
 
 .box_content ul {
@@ -427,13 +327,6 @@ body {
   margin-top: 0;
 }
 
-.circle_box {
-  margin-left: 103%;
-  margin-top: -60%;
-  position: relative;
-  z-index: 7;
-}
-
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -443,20 +336,20 @@ body {
 
 .img {
   border-radius: 50%;
-  width: 600px;
+  width: 300px;
   margin-top: 120px;
   margin-right: 170px;
 }
 
 .follows_box {
-  width: 230px !important;
-  height: 180px;
+  width: 200px;
+  height: 150px;
   background-color: white;
   padding: 10px;
   position: absolute;
-  top: 75%;
+  top: 53%;
   border-radius: 20px;
-  margin-inline-start: 40%;
+  margin-inline-start: 35%;
   box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
   z-index: 2;
 }
@@ -465,192 +358,133 @@ body {
   color: black !important;
   font-weight: bold;
   line-height: 22px;
-  font-size: 16px;
-  text-align: center !important;
+  margin-top: -5%;
+  font-size: 17px !important;
 }
 
 .follows_box h2 {
   color: #6928e6;
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
   font-weight: bold;
   margin-top: 5%;
 }
 
-/* Footer */
-.footer {
-  width: 100vw !important;
-  margin: 0 auto;
+/* Media Queries */
 
-  /* margin-left: 5%; */
+/* Small devices (phones, 375px and up) */
+@media (min-width: 375px) {
+  .img {
+    width: 450px;
+    margin-top: 0px !important;
+    margin-left: 5% !important;
+    margin-top: -110px !important;
+  }
+
+  .box_content h1,
+  .box_content p {
+    font-size: 40px;
+  }
+
+  .follows_box {
+    width: 200px;
+    margin-inline-start: 0px !important;
+    margin-top: 300px;
+  }
+
+  .circle {
+    margin-top: 0px;
+    margin-top: 140%;
+    margin-left: -130px;
+  }
 }
 
-/* Media Queries */
-@media (min-width: 520px) and (max-width: 768px) {
-  .header_container {
-    width: 100%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    margin-left: 0;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .img {
+    width: 650px;
+    margin-top: -200px;
+    margin-left: 15%;
   }
 
-  .box {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .box_content {
-    margin-inline-start: 0;
-    margin-top: 10%;
-    padding: 20px;
-  }
-
-  .box_content h2 {
-    font-size: 30px;
-    margin-top: 10%;
-  }
-
-  .box_content h1 {
-    font-size: 40px;
-    margin-block: 10px;
-  }
-
+  .box_content h1,
   .box_content p {
-    font-size: 16px;
+    font-size: 50px;
   }
 
+  .follows_box {
+    width: 350px;
+    height: 200px;
+    margin-inline-start: 1%;
+    margin-top: 40%;
+  }
+
+  .follows_box p {
+    text-align: center !important;
+  }
+
+  .circle {
+    width: 150px !important ;
+    height: 150px !important;
+    margin-top: 70%;
+    margin-left: 0px;
+    margin-left: -30%;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .header_container {
+    height: 110vh !important;
+  }
+  .img {
+    margin: 0px;
+    width: 350px;
+    margin-top: 300px !important;
+    margin-right: 150px;
+  }
+
+  .circle {
+    width: 70px !important ;
+    height: 70px !important;
+    margin-left: 18% !important;
+    margin-top: 35%;
+  }
+
+  .box_content h1,
+  .box_content p {
+    font-size: 60px;
+  }
+
+  .follows_box {
+    width: 200px;
+    margin-inline-start: 50% !important;
+    margin-top: 150px !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .header_container {
+    height: 80vh !important;
+  }
   .img {
     width: 300px;
-    margin-top: 50px;
-    margin-right: 0;
+    margin-top: 120px;
+    margin-right: 170px;
   }
 
-  .follows_box {
-    width: 180px !important;
-    height: 140px;
-    top: 85%;
-    margin-inline-start: 20%;
+  .circle {
+    margin-left: 10% !important;
   }
 
-  .follows_box h2 {
-    font-size: 40px;
-  }
-
-  .follows_box p {
-    font-size: 14px;
-  }
-
-  .circle_box {
-    margin-left: 50%;
-    margin-top: -30%;
-    visibility: hidden;
-  }
-
-  .footer {
-    width: 120vw !important;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header_container {
-    width: 120vw;
-    border-bottom-left-radius: 80%;
-    border-bottom-right-radius: 80%;
-    margin-left: -0.1%;
-  }
-
-  .box_content h2 {
-    font-size: 35px;
-  }
-
-  .box_content h1 {
-    font-size: 50px;
-    margin: 0 auto;
-    margin-left: 50px !important;
-    text-align: center;
-  }
-
+  .box_content h1,
   .box_content p {
-    margin: 0 auto;
-    font-size: 20px;
-    text-align: center !important;
-    margin-left: 50px !important;
-  }
-
-  .img {
-    margin: 0 auto;
-    width: 450px;
-    margin-top: 50px !important;
-    margin-right: 70px;
-    padding-top: 100px;
+    font-size: 70px;
   }
 
   .follows_box {
-    margin: 0 auto;
-    width: 200px !important;
-    height: 160px;
-    top: 100%;
-    margin-inline-start: 30%;
-  }
-
-  .follows_box h2 {
-    font-size: 50px;
-  }
-
-  .follows_box p {
-    font-size: 15px;
-  }
-
-  .circle_box {
-    margin: 0 auto;
-    margin-left: 30%;
-    margin-top: -30%;
-    display: none;
-  }
-}
-
-@media (min-width: 1025px) {
-  /* Default styles for desktops */
-}
-
-@media (min-width: 340px) and (max-width: 519px) {
-  .header_container {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .box_content {
-    text-align: center !important;
-  }
-
-  .box_content h2 {
-    font-size: 30px;
-    margin-top: 10%;
-  }
-
-  .box_content h1 {
-    font-size: 40px;
-    margin-block: 10px;
-  }
-
-  .box_content p {
-    font-size: 16px;
-    text-align: center !important;
-  }
-
-  .follows_box {
-    width: 300px !important;
-    height: 160px;
-    top: 100%;
-    margin-inline-start: 5%;
-    margin-top: 50%;
-  }
-
-  .circle_box {
-    margin: 0 auto !important;
-    display: none;
+    margin-inline-start: 50%;
+    margin-top: 0px !important;
   }
 }

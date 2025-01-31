@@ -1,22 +1,24 @@
 .container {
+  width: 100%;
   background-image: url("../assets/images/footer.png");
   color: white;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 19%;
+  padding-right: 19%;
   padding-top: 5%;
   padding-bottom: 5%;
-  margin-left: -14%;
 }
 
 .container p {
+  font-size: 16px;
   margin-top: 25px;
-  text-align: center !important;
-  margin-top: 20px !important;
 }
 
-.container h6,
-.p {
-  font-size: 16px !important;
+.container h6 {
+  font-size: 16px;
+}
+
+.p,
+.container h6 {
   color: white !important;
 }
 
@@ -47,6 +49,15 @@
   font-size: 18px;
   font-weight: bold;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+  .border {
+    border: 0px solid #451ade;
+  }
 }
 
 @media (max-width: 1280px) {
