@@ -48,7 +48,9 @@ const Contact: React.FC = () => {
         </div>
       </div>
       <Carousel />
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </div>
   );
 };

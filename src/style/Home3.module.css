@@ -22,6 +22,36 @@
   }
 }
 
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(360deg); /* 7 վայրկյան արագ պտույտ */
+  }
+  85% {
+    transform: rotate(360deg); /* 2 վայրկյան դանդաղ պտույտ */
+  }
+  100% {
+    transform: rotate(360deg); /* 2 վայրկյան դադար */
+  }
+}
+
+@keyframes reverseRotateAnimation {
+  0% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: rotate(0deg); /* 7 վայրկյան արագ պտույտ հակառակ ուղղությամբ */
+  }
+  85% {
+    transform: rotate(0deg); /* 2 վայրկյան դանդաղ պտույտ հակառակ ուղղությամբ */
+  }
+  100% {
+    transform: rotate(0deg); /* 2 վայրկյան դադար */
+  }
+}
+
 .container {
   width: 100%;
   font-family: Sans-Serif;
@@ -36,6 +66,7 @@
 
 .header_container {
   background: linear-gradient(45deg, #eecffc, #c8c8f9);
+  height: 95vh;
 }
 
 .box_content {
@@ -120,7 +151,14 @@ p {
   z-index: 3;
   margin-top: 220px;
   margin-left: 70px;
+  animation: rotateAnimation 11s linear infinite; /* 11 վայրկյան տևողություն */
 }
+
+.dots.reverse {
+  animation: reverseRotateAnimation 11s linear infinite; /* 11 վայրկյան տևողություն հակառակ ուղղությամբ */
+}
+
+/*  */
 
 .user_info img {
   width: 70% !important;
@@ -208,4 +246,222 @@ p {
 
 .image_container h2 {
   font-size: 26px !important;
+}
+
+/* Media */
+
+/* Extra small devices (phones, up to 360px) */
+@media (max-width: 360px) {
+  .box_content {
+    margin-inline-start: 2%;
+    text-align: center;
+    margin-top: 15%;
+  }
+
+  .box_content h3 {
+    font-size: 250px;
+    left: 20%;
+  }
+
+  .box_content h1 {
+    font-size: 30px;
+  }
+
+  .box_content h6 {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img {
+    width: 80% !important;
+    margin-left: 0 !important;
+  }
+
+  .dots {
+    width: 60%;
+    margin-left: 10px;
+  }
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: 480px) {
+  .header_container {
+    height: 150vh;
+  }
+  .box_content {
+    margin-inline-start: 2%;
+    text-align: center;
+    margin-top: 15%;
+  }
+
+  .box_content h3 {
+    font-size: 250px;
+    left: 20%;
+  }
+
+  .box_content h1 {
+    font-size: 30px;
+  }
+
+  .box_content h6 {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img {
+    width: 80% !important;
+    margin-left: 0 !important;
+  }
+
+  .dots {
+    width: 60%;
+    margin-left: 10px;
+  }
+}
+
+/* Small devices (phones, 481px to 767px) */
+@media (max-width: 767px) {
+  .header_container {
+    height: 95vh;
+  }
+  .box_content {
+    margin-inline-start: 3%;
+    text-align: center;
+    margin-top: 20%;
+
+    width: 90%;
+    text-align: center;
+  }
+
+  .box_content h3 {
+    display: none;
+  }
+
+  .box_content h1 {
+    font-size: 35px;
+  }
+
+  .box_content h6 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .dots {
+    width: 45%;
+    margin-left: 250px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header_container {
+    height: 130vh;
+  }
+  .box_content {
+    margin-inline-start: 5%;
+    text-align: start;
+    margin-top: 18%;
+
+    width: 90%;
+    text-align: center;
+  }
+
+  .box_content h3 {
+    display: none;
+  }
+
+  .box_content h1 {
+    font-size: 70px;
+  }
+
+  .box_content h6 {
+    font-size: 22px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .img {
+    width: 800px !important;
+    margin-left: 100px !important;
+  }
+
+  .dots {
+    width: 50%;
+    margin-left: 450px;
+  }
+}
+
+/* Large devices (laptops, 1024px to 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header_container {
+    height: 115vh;
+  }
+  .box_content {
+    margin-inline-start: 7%;
+    text-align: start;
+    margin-top: 15%;
+  }
+
+  .box_content h3 {
+    display: none;
+  }
+
+  .box_content h1 {
+    font-size: 60px;
+  }
+
+  .box_content h6 {
+    font-size: 24px;
+  }
+
+  .img {
+    width: 600px !important;
+    margin-left: -150px !important;
+  }
+
+  .dots {
+    width: 75%;
+    margin-left: 70px;
+  }
+}
+
+/* Extra large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .box_content {
+    margin-inline-start: 10%;
+    text-align: start;
+    margin-top: 12%;
+  }
+
+  .box_content h3 {
+    font-size: 450px;
+    left: 40%;
+  }
+
+  .box_content h1 {
+    font-size: 70px;
+  }
+
+  .box_content h6 {
+    font-size: 26px;
+  }
+
+  .img {
+    width: 650px !important;
+    margin-left: -200px !important;
+  }
+
+  .dots {
+    width: 80%;
+    margin-left: 90px;
+  }
 }

@@ -118,14 +118,14 @@ const HomePage3: React.FC = () => {
             <TitleContainer title="Who I am" description="About My Resume" />
           </div>
           <div
-            className={`${styles.user_info}  w-full flex flex-col justify-start items-center md:flex-row`}
+            className={`${styles.user_info}  w-full flex flex-col justify-start items-center lg:flex-row`}
           >
             <div
               style={{ width: "100%" }}
-              className={` w-full flex-col items-center  md:flex-row`}
+              className={` w-full flex-col items-center  lg:flex-row`}
             >
               <div
-                className={` w-full flex flex-col items-center  md:flex-row`}
+                className={` w-full flex flex-col items-center  lg:flex-row`}
               >
                 <ul>
                   {[
@@ -173,7 +173,7 @@ const HomePage3: React.FC = () => {
               description="Client’s Reviews"
             />
           </div>
-          <div className="flex flex-col justify-center items-center gap-10 md:flex-row">
+          <div className="flex flex-col justify-center items-center gap-10 lg:flex-row">
             <div
               className={`${styles.advice}  justify-center items-center border-purple-300 rounded-2xl`}
             >
@@ -308,7 +308,7 @@ const HomePage3: React.FC = () => {
           />
         </div>
         <div
-          className={`${styles.contacts} flex flex-col  justify-center items-center gap-10 md:flex-row`}
+          className={`${styles.contacts} flex flex-col  justify-center items-center gap-10 lg:flex-row`}
         >
           <div style={{ width: "50%" }}>
             <div>

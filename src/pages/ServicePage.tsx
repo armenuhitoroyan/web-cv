@@ -10,7 +10,7 @@ const ServicePage: React.FC = () => {
   useTitle("Services");
   return (
     <div
-      className={`${styles.container} w-full  flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container} w-full  flex-col items-center justify-center lg:flex-row`}
     >
       <div className={styles.menu}>
         <ParticlesContainer title="Our Services" ref="services" img={bgImage} />

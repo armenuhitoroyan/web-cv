@@ -21,11 +21,11 @@ const ErrorPage: React.FC = () => {
   return (
     <div
       id="page404-container"
-      className={`${styles.container} w-full flex flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container} w-full flex flex-col items-center justify-center lg:flex-row`}
     >
       <div>
         <div>
-          <h1 className={` w-full  flex justify-center`}>
+          <h1 className={` ${styles.context} w-full  flex justify-center`}>
             <span>4</span>
             <PiSmileyXEyesFill
               style={{
@@ -37,7 +37,9 @@ const ErrorPage: React.FC = () => {
           </h1>
 
           <h2>Ooops, Page Not Found</h2>
-          <p>We can&apos;t seem to find the page you&apos;re looking for.</p>
+          <p className={styles.text}>
+            We can&apos;t seem to find the page you&apos;re looking for.
+          </p>
           <div className={styles.search}>
             <input type="text" placeholder="Enter Keyword..." />
             <button></button>
@@ -52,12 +54,12 @@ const ErrorPage: React.FC = () => {
           marginTop: "450px",
         }}
       >
-        <div className="w-full flex-col flex justify-center md:flex-row">
+        <div className={styles.Web_sites}>
           <WebSites width={200} />
         </div>
         <h5>Copyright © 2024 AfsuBy Tohidur Hasan, All Rights Reserved</h5>
       </div>
-      <div className={styles.bg}>123456789</div>
+      <div className={styles.bg}></div>
     </div>
   );
 };

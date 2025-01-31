@@ -103,7 +103,7 @@ const PortfolioPage: React.FC = () => {
   useTitle("Portfolio Details 1"); //
   return (
     <div
-      className={`${styles.container} w-full flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container} w-full flex-col items-center justify-center lg:flex-row`}
     >
       <div className={styles.menu}>
         <ParticlesContainer
@@ -177,7 +177,7 @@ const PortfolioPage: React.FC = () => {
                 <div className={styles.rightContent}>
                   {/* Description */}
                   <div
-                    className={`${styles.flexRow} flex flex-col md:flex-row`}
+                    className={`${styles.flexRow} flex flex-col lg:flex-row`}
                   >
                     <div className={styles.leftContent}>
                       <h2 className={styles.heading}>Description</h2>

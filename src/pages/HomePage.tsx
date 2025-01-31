@@ -10,7 +10,7 @@ import AuthorInfo from "../components/AuthorInfo";
 import ResumeComponent from "../components/Resume";
 import Services from "../components/Services";
 import TitleContainer from "../components/Title";
-import ImageCard from "../components/cards/ImgCard";
+
 import AddUserForm from "../components/form/AddUserForm";
 import { useTitle } from "../hooks/useTitle";
 import ImageModel from "../components/ImageModel";
@@ -257,7 +257,9 @@ const HomePage: React.FC = () => {
             description="My Resume"
           />
           <ResumeComponent firstTitle="Education" secondTitle="Experience" />
-          <div className="flex flex-col freelance-available justify-center items-center gap-10 lg:flex-row">
+          <div
+            className={` flex flex-col freelance-available justify-center items-center gap-10 lg:flex-row`}
+          >
             <ArticleCard
               image="https://afsu.tohidur.com/img/blog-1.jpg"
               commentBadge="12"
@@ -287,7 +289,7 @@ const HomePage: React.FC = () => {
           <div
             className={`${styles.contacts} flex flex-col  justify-center items-center gap-10 lg:flex-row`}
           >
-            <div style={{ width: "50%" }}>
+            <div>
               <div>
                 <UserInfoCard
                   IconComponent={HiPhone}

@@ -5,8 +5,6 @@ import styles from "../../style/ContactPage.module.css";
 import ContactCard from "./ContactCard";
 import Data from "../../interfaces/Data";
 
-
-
 const ContactsCard: React.FC = () => {
   const userdata: Data[] = [
     {
@@ -28,7 +26,7 @@ const ContactsCard: React.FC = () => {
 
   return (
     <div
-      className={`w-full flex flex-col items-center justify-center md:flex-row ${styles.contacts_container}`}
+      className={`w-full flex flex-col items-center justify-center gap-10 lg:flex-row ${styles.contacts_container}`}
     >
       {userdata.map((data, index) => (
         <ContactCard

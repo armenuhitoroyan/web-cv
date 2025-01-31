@@ -314,4 +314,14 @@ h6 {
 
 /* Media */
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .blog_container {
+    width: 100% !important;
+  }
 
+  .category_box {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+}

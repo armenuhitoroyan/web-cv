@@ -7,10 +7,10 @@ import ImageModel from "../components/ImageModel";
 import { useTitle } from "../hooks/useTitle";
 
 const Servicedetails: React.FC = () => {
-  useTitle("Services Details"); 
+  useTitle("Services Details");
   return (
     <div
-      className={`${styles.container} w-full  flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container} w-full  flex-col items-center justify-center lg:flex-row`}
     >
       <div className={styles.menu}>
         <ParticlesContainer
@@ -18,7 +18,7 @@ const Servicedetails: React.FC = () => {
           ref="services-details"
           img={bgImage}
         />
-        <div className="w-full flex flex-col items-center justify-center gap-10 md:flex-row">
+        <div className="w-full flex flex-col items-center justify-center gap-10 lg:flex-row">
           <div className={styles.text_container}>
             <h3 style={{ marginLeft: "5%" }}>Stunning Design</h3>
             <p>
@@ -63,14 +63,14 @@ const Servicedetails: React.FC = () => {
         </div>
       </div>
       <div
-        className={`${styles.image} w-full flex flex-col items-center justify-center md:flex-row`}
+        className={`${styles.image} w-full flex flex-col items-center justify-center lg:flex-row`}
       >
         <img
           src={`https://afsu.tohidur.com/img/services-1.jpg`}
           alt="Profile Page 1"
         />
       </div>
-      <div className="w-full flex-col items-center justify-center md:flex-row">
+      <div className="w-full flex-col items-center justify-center lg:flex-row">
         <h3 style={{ marginLeft: "5%" }}>Service Moto</h3>
         <p>
           lotsie roll dragée bonbon croisnt. Chupa chups loream sesame snaps
@@ -85,7 +85,7 @@ const Servicedetails: React.FC = () => {
         </p>
       </div>
       <div
-        className={`${styles.image_context} w-full flex flex-col items-center justify-center md:flex-row`}
+        className={`${styles.image_context} w-full flex flex-col items-center justify-center lg:flex-row`}
       >
         <div
           style={{ marginTop: "70px", marginBottom: "70px" }}

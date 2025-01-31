@@ -270,7 +270,8 @@ button {
   }
 
   .map {
-    height: 400px;
+    height: 700px !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -290,10 +291,6 @@ button {
   .info {
     padding-left: 5%;
     padding-right: 5%;
-  }
-
-  .map {
-    height: 300px;
   }
 
   .hading h2 {
@@ -321,11 +318,6 @@ button {
     overflow-x: hidden;
   }
 
-  .map {
-    width: 90vw;
-    height: 250px;
-  }
-
   button {
     width: 200px;
     height: 60px;
@@ -349,5 +341,9 @@ button {
 
   .contact_item {
     margin-top: 10px;
+  }
+
+  .footer {
+    width: 100vw !important;
   }
 }

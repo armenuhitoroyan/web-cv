@@ -79,3 +79,10 @@
     border: 0px solid #451ade;
   }
 }
+
+@media (max-width: 520px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+}

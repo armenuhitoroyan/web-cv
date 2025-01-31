@@ -30,7 +30,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <div
-      className={`w-full  flex-col items-center justify-center md:flex-row ${styles.container}`}
+      className={`w-full  flex-col items-center justify-center lg:flex-row ${styles.container}`}
     >
       <div className={styles.menu}>
         <ParticlesContainer
@@ -40,14 +40,14 @@ const BlogPage: React.FC = () => {
         />
       </div>
 
-      <div className="w-full  flex flex-col  justify-center md:flex-row">
+      <div className="w-full  flex flex-col  justify-center lg:flex-row">
         <div
           style={{ width: "65%" }}
           className={` ${styles.blog_container} flex justify-center items-center`}
         >
           <div
             style={{ marginLeft: "0px !important" }}
-            className={`${styles.blog_content}  flex-col justify-center items-center md:flex-row`}
+            className={`${styles.blog_content}  flex-col justify-center items-center lg:flex-row`}
           >
             <BlogData
               img="https://afsu.tohidur.com/img/profile-1.jpg"
@@ -179,7 +179,7 @@ const BlogPage: React.FC = () => {
             <DesignPages />
 
             <div
-              className={`${styles.posted_card} flex flex-col justify-center items-center gap-10 md:flex-row`}
+              className={`${styles.posted_card} flex flex-col justify-center items-center gap-10 lg:flex-row`}
             >
               <div>
                 <PostedCard
@@ -230,7 +230,7 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
         {/* Part 2 */}
-        <div style={{ width: "35%" }}>
+        <div style={{ width: "35%" }} className={styles.category_box}>
           <div className={`w-full md:w-2/5 ${styles.categories}`}>
             {/* Recent News */}
             <div className={`${styles.card} mt-4`}>

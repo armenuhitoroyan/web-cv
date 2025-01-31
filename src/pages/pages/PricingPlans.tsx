@@ -12,7 +12,7 @@ export const PricingPlans: React.FC = () => {
   return (
     <div className={styles.container}>
       <ParticlesContainer title="About Us" ref="about" img={bgImage} />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
         <PricingCard
           marginTop="-40px"
           marginLeft="5%"
@@ -34,7 +34,7 @@ export const PricingPlans: React.FC = () => {
       </div>
       <div
         style={{ backgroundImage: `url(${bgImage})`, marginTop: "20px" }}
-        className={`w-full  flex-col md:flex-col gap-5 justify-around items-center ${styles.creative}`}
+        className={`w-full  flex-col lg:flex-col gap-5 justify-around items-center ${styles.creative}`}
       >
         <h2>Let's Create Something Creative Together</h2>
         <p>We can't wait to hear from making something beautiful and new!</p>
@@ -48,7 +48,7 @@ export const PricingPlans: React.FC = () => {
           description="Assignments Packages"
         />
       </div>
-      <div className="flex flex-col justify-center items-center md:flex-row">
+      <div className="flex flex-col justify-center items-center lg:flex-row">
         <div style={{ width: "100%" }}>
           <PricingCard
             marginLeft="70%"
