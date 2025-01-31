@@ -1,8 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
-
 import ServicePage from "../pages/ServicePage";
 import PortfolioPage from "../pages/PortfolioPage";
 import BlogPage from "../pages/BlogPage";
@@ -18,14 +21,25 @@ import PortfolioDetails from "../pages/portfolio/PortfolioDetails";
 import HomePage3 from "../pages/Homepage/Home3";
 import PricingPlans from "../pages/pages/PricingPlans";
 import PortfolioDetails2 from "../pages/portfolio/PortfolioDetails2";
+import { useScrolling } from "../hooks/useScrolling";
+import LoadingComponent from "../components/Loading";
 
-function AppRoutes(): JSX.Element {
+function AppRoutesContent(): JSX.Element {
+  const { isScrolled } = useScrolling();
+  const location = useLocation();
   const hideNavbar =
     location.pathname === "/index-4" || location.pathname === "/index-4-dark";
+
+  console.log(isScrolled);
+
   return (
-    <Router>
-      <Navbar />
-      {/* {hideNavbar && <Navbar />} */}
+    <>
+      {!hideNavbar && (
+        <div>
+          {/* <LoadingComponent /> */}
+          <Navbar />
+        </div>
+      )}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/index-2" element={<Homepage2 />} />
@@ -51,6 +65,14 @@ function AppRoutes(): JSX.Element {
         <Route path="/pricing-plans" element={<PricingPlans />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+    </>
+  );
+}
+
+function AppRoutes(): JSX.Element {
+  return (
+    <Router>
+      <AppRoutesContent />
     </Router>
   );
 }

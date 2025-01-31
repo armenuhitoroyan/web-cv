@@ -48,9 +48,9 @@ const services: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <section className={`w-full flex flex-col md:flex-row justify-around `}>
+    <section className={`w-full flex flex-col lg:flex-row justify-around `}>
       <div className={`${styles.services}`}>
-        <div className="w-full flex flex-col gap-5 md:flex-row justify-around ">
+        <div className="w-full flex flex-col gap-5 lg:flex-row justify-around ">
           {services.map((service, index) => (
             <div key={index} className={styles.card}>
               <div
@@ -286,12 +286,12 @@ const Homepage2: React.FC = () => {
   useTitle("Home 2"); // Նոր վերնագիր՝ "Home"
   return (
     <div
-      className={`w-full  flex-col md:flex-col justify-between ${styles.container}`}
+      className={`w-full  flex-col lg:flex-col justify-between ${styles.container}`}
     >
-      <div className={`w-full flex flex-col md:flex-row justify-around `}>
+      <div className={`w-full flex flex-col lg:flex-row justify-around `}>
         <AboutUser color="black" />
         <div
-          className={`w-full flex flex-col md:flex-row justify-around ${styles.context}`}
+          className={`w-full flex flex-col lg:flex-row justify-around ${styles.context}`}
         >
           <img src="https://afsu.tohidur.com/img/girl.png" alt="Profile" />
           <div className={styles.info}>
@@ -312,9 +312,9 @@ const Homepage2: React.FC = () => {
         title="Collection of my project"
         description="Work Showcase"
       />
-      <div className="w-full flex-col md:flex-col gap-5 items-center justify-around">
-        <div className="w-full flex flex-col md:flex-row gap-5 justify-around">
-          <div style={{ width: "50%" }}>
+      <div className="w-full flex-col lg:flex-col gap-5 items-center justify-around">
+        <div className="w-full flex flex-col lg:flex-row gap-5 justify-around">
+          <div style={{ width: "100%" }}>
             <ImageModel
               src="https://afsu.tohidur.com/img/profile-home-img-1.jpg"
               width=""
@@ -325,7 +325,7 @@ const Homepage2: React.FC = () => {
               <p>Website Design, Branding</p>
             </div>
           </div>
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "100%" }}>
             <ImageModel
               src="https://afsu.tohidur.com/img/profile-6.jpg"
               width=""
@@ -337,7 +337,7 @@ const Homepage2: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-5 justify-around">
+        <div className="w-full flex flex-col lg:flex-row gap-5 justify-around">
           <div>
             <ImageModel
               src="https://afsu.tohidur.com/img/profile-home-img-5.jpg"
@@ -373,7 +373,7 @@ const Homepage2: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-5 justify-around">
+        <div className="w-full flex flex-col lg:flex-row gap-5 justify-around">
           <div>
             <ImageModel
               src="https://afsu.tohidur.com/img/profile-home-img-3.jpg"
@@ -401,9 +401,10 @@ const Homepage2: React.FC = () => {
           Load more
         </button>
       </div>
+      {/*  */}
       <div
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={`w-full  flex-col md:flex-col gap-5 justify-around items-center ${styles.creative}`}
+        className={`w-full  flex-col lg:flex-col gap-5 justify-around items-center ${styles.creative}`}
       >
         <h2>Let's Create Something Creative Together</h2>
         <p>We can't wait to hear from making something beautiful and new!</p>
@@ -418,7 +419,9 @@ const Homepage2: React.FC = () => {
       </div>
       <Packages />
       <Carousel />
-      <Footer />
+      <div className={`w-screen w-full flex ${styles.footer}`}>
+        <Footer />
+      </div>
     </div>
   );
 };

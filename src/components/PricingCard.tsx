@@ -21,7 +21,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div className="w-full flex justify-start items-center min-h-screen p-4">
       <div
         style={{ width: `${widthBottom}%` }}
-        className=" flex-col md:flex-col max-w-4xl w-full gap-4"
+        className=" flex-col lg:flex-col max-w-4xl w-full gap-4"
       >
         {/* Purple Card */}
         <div className="  bg-indigo-900 rounded-3xl p-8 text-white">

@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 .container {
   font-family: Sans-Serif;
   text-align: center;
@@ -33,7 +36,7 @@
   margin-left: 20px;
 }
 
-/* Services */
+/* Services
 
 .container section {
   text-align: center;
@@ -132,7 +135,7 @@
   font-size: 14px;
   color: #808080;
   margin: 0 auto;
-}
+} */
 
 /* Carousel */
 
@@ -346,4 +349,297 @@
 .description {
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Services */
+.container section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.container section {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.container section h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 50px;
+  width: 50%;
+  height: 370px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.box1 {
+  width: 120px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  transform: rotate(90deg);
+}
+
+.box2 {
+  width: 120px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -150px;
+  margin-left: 25px;
+  color: white;
+}
+
+.skill_info {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-align: start !important;
+  padding-left: 5%;
+}
+
+.skill_info a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skill_info a:hover {
+  text-decoration: underline;
+}
+
+.skill_info p {
+  font-size: 14px;
+  color: #808080;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  width: 100vw !important;
+  margin-left: 5%;
+}
+
+/* Media */
+
+@media screen and (max-width: 1024px) {
+  .context {
+    padding-top: 10%;
+    padding-bottom: 8%;
+    border-bottom-left-radius: 15%;
+  }
+
+  .card {
+    width: 70%;
+    height: auto;
+    padding: 40px;
+  }
+
+  .context h2 {
+    font-size: 40px;
+  }
+
+  .context p {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 45%;
+    height: 350px;
+    padding: 30px;
+  }
+
+  .box1,
+  .box2 {
+    width: 100px;
+    height: 120px;
+    margin-left: 15px;
+  }
+
+  .box2 {
+    margin-top: -120px;
+  }
+
+  .card h4 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .services {
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .context {
+    padding-top: 8%;
+    padding-bottom: 6%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .context h2 {
+    font-size: 35px;
+  }
+
+  .context p {
+    font-size: 13px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .box1,
+  .box2 {
+    width: 80px;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  .box2 {
+    margin-top: -100px;
+  }
+
+  .card h4 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+  }
+
+  .services {
+    gap: 1rem;
+  }
+  .footer {
+    width: 120vw !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .context {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom-left-radius: 5%;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .context h2 {
+    font-size: 30px;
+  }
+
+  .context p {
+    font-size: 12px;
+  }
+
+  .container section {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .box1,
+  .box2 {
+    width: 60px;
+    height: 80px;
+    margin-left: 5px;
+  }
+
+  .box2 {
+    margin-top: -80px;
+  }
+
+  .card h4 {
+    font-size: 0.9rem;
+  }
+
+  .card p {
+    font-size: 0.7rem;
+  }
+
+  .services {
+    gap: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .skill_info a {
+    font-size: 18px;
+  }
+
+  .skill_info p {
+    font-size: 12px;
+  }
+
+  .footer {
+    width: 100vw !important;
+    margin: 0 auto;
+  }
 }

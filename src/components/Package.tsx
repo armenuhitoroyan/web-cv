@@ -15,7 +15,7 @@ const Packages: React.FC = () => {
 
       <div
         style={{ width: "70%" }}
-        className="flex flex-col md:flex-row justify-end gap-20"
+        className="flex flex-col lg:flex-row justify-end gap-20"
       >
         <PricingCard
           marginTop="-40px"

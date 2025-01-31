@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../style/HomePage.module.css";
 import Footer from "../components/footer/Footer";
 import { HiMiniEnvelope } from "react-icons/hi2";
@@ -13,6 +13,7 @@ import TitleContainer from "../components/Title";
 import ImageCard from "../components/cards/ImgCard";
 import AddUserForm from "../components/form/AddUserForm";
 import { useTitle } from "../hooks/useTitle";
+import ImageModel from "../components/ImageModel";
 
 interface ArticleCardProps {
   image: string;
@@ -68,8 +69,94 @@ const Assessment: React.FC = () => (
   </div>
 );
 
+const images = [
+  {
+    id: 1,
+    src: "profile-1",
+    category: "branding",
+    title: "Branding 1",
+    description: "A creative branding concept.",
+  },
+  {
+    id: 2,
+    src: "profile-2",
+    category: "development",
+    title: "Development 1",
+    description: "A web development showcase.",
+  },
+  {
+    id: 3,
+    src: "profile-3",
+    category: "branding",
+    title: "Branding 2",
+    description: "Modern branding design.",
+  },
+  {
+    id: 4,
+    src: "showcase-3",
+    category: "showcase",
+    title: "Showcase 1",
+    description: "Innovative design ideas.",
+  },
+  {
+    id: 5,
+    src: "showcase-4",
+    category: "showcase",
+    title: "Showcase 2",
+    description: "Minimalistic showcase example.",
+  },
+  {
+    id: 6,
+    src: "showcase-5",
+    category: "design",
+    title: "Design 1",
+    description: "Creative UI/UX design.",
+  },
+  {
+    id: 7,
+    src: "showcase-6",
+    category: "ui/ux",
+    title: "UI/UX 1",
+    description: "Professional UI design.",
+  },
+  {
+    id: 8,
+    src: "showcase-8",
+    category: "development",
+    title: "Development 2",
+    description: "Backend API integration.",
+  },
+  {
+    id: 9,
+    src: "showcase-1",
+    category: "ui/ux",
+    title: "UI/UX 2",
+    description: "Frontend development concepts.",
+  },
+];
+
+const categories = [
+  { id: "all", label: "Show All" },
+  { id: "design", label: "Design" },
+  { id: "branding", label: "Branding" },
+  { id: "development", label: "Development" },
+  { id: "ui/ux", label: "UI/UX Design" },
+];
+
 const HomePage: React.FC = () => {
   useTitle("Home"); // Նոր վերնագիր՝ "Home"
+
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const filteredImages = images.filter((image) => {
+    if (activeCategory === "all") return true;
+    if (activeCategory === "design") return image.category === "showcase";
+    if (activeCategory === "branding") return image.id === 1 || image.id === 3;
+    if (activeCategory === "development")
+      return image.id === 2 || image.id === 8;
+    if (activeCategory === "ui/ux") return image.category === "showcase";
+    return false;
+  });
 
   const handleAddUser = (formData: {
     name: string;
@@ -85,7 +172,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <div>
-        <div>
+        <div className={styles.header}>
           <Header />
         </div>
         <div>
@@ -94,67 +181,83 @@ const HomePage: React.FC = () => {
           </div>
           <TitleContainer title="What We Do" description="Our Services" />
           <Services />
+
+          <div style={{ marginBlock: "50px" }}>
+            <TitleContainer
+              title="Collection of my project"
+              description="Work Showcase"
+            />
+          </div>
+          {/* *********************** */}
+
+          <div>
+            {/* Radio input-ներ */}
+            <div className="flex justify-center gap-6 mb-6">
+              {categories.map((category) => (
+                <label
+                  key={category.id}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="category"
+                    value={category.id}
+                    checked={activeCategory === category.id}
+                    onChange={(e) => setActiveCategory(e.target.value)}
+                    className="hidden peer"
+                  />
+                  <div
+                    className={`w-6 h-6 rounded-full border-2 ${
+                      activeCategory === category.id
+                        ? "bg-purple-600 border-purple-600"
+                        : "bg-gray-200 border-gray-400"
+                    } peer-checked:ring-2 peer-checked:ring-purple-600`}
+                  ></div>
+                  <span className="text-gray-800">{category.label}</span>
+                </label>
+              ))}
+            </div>
+
+            {/* Նկարներ */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+              {filteredImages.map((image) => (
+                <div key={image.id} className="text-center">
+                  <ImageModel
+                    src={`https://afsu.tohidur.com/img/${image.src}.jpg`}
+                    width={`100%`}
+                    height={`auto`}
+                  />
+                  <div style={{ textAlign: "start" }}>
+                    <h3 className="text-lg text-gray-300 font-semibold mt-4 mb-4">
+                      <a
+                        href="#"
+                        className="text-black text-3xl font-bold  hover:underline hover:text-black"
+                      >
+                        {image.title}
+                      </a>
+                    </h3>
+                    <h6
+                      style={{ margin: "0 auto" }}
+                      className="text-gray-600 text-sm"
+                    >
+                      {image.description}
+                    </h6>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+            Load more
+          </button>
+          {/* Start consulting */}
           <TitleContainer
             title="Professional Experience"
             description="My Resume"
           />
-          <div className="w-full flex   items-center justify-center gap-20">
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-1.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="https://afsu.tohidur.com/img/profile-3.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="src/assets/images/brain.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-          </div>
-          <div className="w-full flex   items-center justify-center gap-20">
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-4.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-6.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-5.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-          </div>
-          <div className="w-full flex   items-center justify-center gap-20">
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-7.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-8.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-            <ImageCard
-              image="https://afsu.tohidur.com/img/showcase-9.jpg"
-              title="List of brands"
-              subtitle="Digital Web"
-            />
-          </div>
-          <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
-            Load more
-          </button>
-          Start consulting
           <ResumeComponent firstTitle="Education" secondTitle="Experience" />
-          <div className="flex flex-col freelance-available justify-center gap-10 md:flex-row">
+          <div className="flex flex-col freelance-available justify-center items-center gap-10 lg:flex-row">
             <ArticleCard
               image="https://afsu.tohidur.com/img/blog-1.jpg"
               commentBadge="12"
@@ -182,7 +285,7 @@ const HomePage: React.FC = () => {
             description="Love to Hear From You, Get in Touch!"
           />
           <div
-            className={`${styles.contacts} flex flex-col  justify-center items-center gap-10 md:flex-row`}
+            className={`${styles.contacts} flex flex-col  justify-center items-center gap-10 lg:flex-row`}
           >
             <div style={{ width: "50%" }}>
               <div>
@@ -214,7 +317,9 @@ const HomePage: React.FC = () => {
           {/* <Assessment /> */}
         </div>
       </div>
-      <Footer />
+      <div className={` ${styles.footer}`}>
+        <Footer />
+      </div>
     </div>
   );
 };

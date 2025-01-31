@@ -20,6 +20,7 @@
 @media (max-width: 768px) {
   .container {
     overflow-x: hidden !important;
+    padding-inline: 10px !important;
   }
   .menu :first-child {
     display: flex;

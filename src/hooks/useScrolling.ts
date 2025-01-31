@@ -1,27 +1,20 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const useScrolling = (): { isScrolled: boolean } => {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+export function useScrolling() {
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    // Վերահսկում ենք սքրոլի շարժումը
     const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setIsScrolled(true); // Եթե սքրոլի դիրքը 200px-ից ավել է
-      } else {
-        setIsScrolled(false);
-      }
+      // Սեթ արա true, եթե scrollY > 200
+      setIsScrolled(window.scrollY > 20);
     };
 
+    // Ավելացրու event listener-ը
     window.addEventListener("scroll", handleScroll);
 
-    // Բեռնելիս հանելու ենք լիստենեռ-ն event-ից
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Մաքրիր listener-ը unmount-ի ժամանակ
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return {
-    isScrolled,
-  };
-};
+  return { isScrolled };
+}

@@ -46,7 +46,7 @@ const Services: React.FC = () => {
   ];
   return (
     <div
-      className={`${styles.container} w-full  flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container} w-full  flex-col items-center justify-center LG:flex-row`}
     >
       <div className={styles.card}>
         {info.map((data, index) => (

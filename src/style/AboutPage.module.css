@@ -33,7 +33,6 @@ p {
 }
 
 .container_content > :last-child ul li {
-  padding-top: 10px !important;
   margin-top: 1px;
   height: 70px;
 }
@@ -53,6 +52,7 @@ span {
 .table h6 {
   margin-inline-start: 10px;
   border-radius: 15px;
+  margin-top: -0% !important;
 }
 
 .table span {
@@ -218,8 +218,105 @@ span {
 
 /* Media */
 
-@media (max-width: 768px) {
+@media (max-width: 519px) {
+  .container_content {
+    margin: 0 auto !important;
+    width: 100%;
+    margin-top: 80% !important;
+  }
+}
+
+/* Փոքր էկրանների համար (մինչև 768px, օրինակ՝ բջջային սարքեր) */
+@media (min-width: 520px) and (max-width: 768px) {
   .container_content {
     width: 100%;
+    margin-top: 20%;
+  }
+
+  .container_content h2 {
+    font-size: 70px !important;
+    text-align: start;
+  }
+  .timeline_container {
+    flex-direction: column; /* Ցուցադրումը դարձնել սյունակ */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .timeline_section {
+    width: 90%; /* Ընդարձակել ամբողջ էկրանի համար */
+    padding: 15px;
+  }
+
+  .timeline {
+    padding-left: 10px; /* Կրճատել հեռավորությունները */
+  }
+
+  .timeline_item {
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    left: 10px; /* Ժամանակային գծի ճշգրտում */
+  }
+
+  .timeline_item::before {
+    left: 2px;
+  }
+
+  .timeline_content {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .timeline_content h4 {
+    font-size: 14px;
+  }
+
+  .timeline_content p {
+    font-size: 12px;
+  }
+
+  .page_element {
+    margin: 0px;
+  }
+  .container_content h2 {
+    margin-top: 50px;
+  }
+}
+
+/* Միջին էկրանների համար (768px - 1024px, օրինակ՝ պլանշետներ) */
+@media (max-width: 1024px) {
+  .timeline_container {
+    flex-direction: column; /* Սյունակային դասավորություն */
+    padding: 15px;
+  }
+
+  .timeline_section {
+    width: 85%;
+  }
+
+  .timeline_content {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .timeline_content h4 {
+    font-size: 15px;
+  }
+
+  .timeline_content p {
+    font-size: 13px;
+  }
+}
+
+/* Խոշոր էկրանների համար (1024px-ից մեծ) */
+@media (min-width: 1025px) {
+  .timeline_container {
+    flex-direction: row;
+  }
+
+  .timeline_section {
+    width: 45%;
   }
 }

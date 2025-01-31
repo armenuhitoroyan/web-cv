@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "../../style/Error.module.css";
 import { PiSmileyXEyesFill } from "react-icons/pi";
 

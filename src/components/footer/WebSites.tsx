@@ -11,7 +11,7 @@ const WebSites: React.FC<WebPagesProps> = ({ width }) => {
   return (
     <div className="flex justify-center flex-row ">
       <ul
-        className={`flex justify-center flex-row ${styles.border}`}
+        className={`flex justify-center gap-10 flex-row ${styles.border}`}
         style={{ width: `${width}%` }}
       >
         <ListPages

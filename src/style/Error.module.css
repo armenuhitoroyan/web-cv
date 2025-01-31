@@ -100,3 +100,79 @@
   z-index: 2;
   opacity: 0.8;
 }
+
+/* Media */
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .container > div:first-child {
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+
+  .container h1 {
+    font-size: 6rem;
+  }
+
+  .container span {
+    font-size: 100px;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .container p {
+    font-size: 0.9rem;
+  }
+
+  .search input {
+    padding: 12px;
+  }
+
+  .search button {
+    margin-left: 70%;
+  }
+
+  .bg {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .container > div:first-child {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 60px;
+  }
+
+  .container h1 {
+    font-size: 5rem;
+  }
+
+  .container span {
+    font-size: 80px;
+  }
+
+  .container h2 {
+    font-size: 1rem;
+  }
+
+  .container p {
+    font-size: 0.8rem;
+  }
+
+  .search input {
+    padding: 10px;
+  }
+
+  .search button {
+    margin-left: 60%;
+  }
+
+  .bg {
+    height: 60vh;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../style/AboutPage.module.css";
 import UserInfo from "./UserInfo";
 import Skills from "./Skills";
@@ -32,7 +32,7 @@ const Logos: React.FC<LogosProps> = ({ backgroundColor, size, className }) => {
 const Pages: React.FC<PagesProps> = ({ size }) => {
   return (
     <div
-      className={`w-full flex-col flex md:flex-row justify-center items-center ${styles.page_element}`}
+      className={`w-full  flex md:flex-row justify-center items-center ${styles.page_element}`}
     >
       <div>
         <Logos
@@ -62,9 +62,9 @@ const Pages: React.FC<PagesProps> = ({ size }) => {
 const AuthorInfo: React.FC = () => {
   return (
     <div
-      className={`${styles.container_content} w-full  flex-col items-center justify-center md:flex-row`}
+      className={`${styles.container_content} w-full  flex-col items-center justify-center lg:flex-row`}
     >
-      <div className="w-full flex flex-col items-center justify-center md:flex-row">
+      <div className="w-full flex flex-col items-center justify-center lg:flex-row">
         <div className={` w-full flex-col items-center  md:flex-row`}>
           <div>
             <h2>About Me</h2>
@@ -72,7 +72,7 @@ const AuthorInfo: React.FC = () => {
           <div>
             <p>I like creating a cool design project.</p>
           </div>
-          <div className={` w-full flex flex-col items-center  md:flex-row`}>
+          <div className={` w-full flex  items-center  lg:flex-row`}>
             <div
               className={`${styles.button} w-full flex flex-col items-center`}
             >
@@ -87,7 +87,7 @@ const AuthorInfo: React.FC = () => {
         </div>
 
         <div
-          className={`w-full flex-col items-center justify-center md:flex-row`}
+          className={`w-full flex-col items-center justify-center lg:flex-row`}
         >
           <div>
             <p style={{ color: "#808080" }}>
@@ -109,7 +109,7 @@ const AuthorInfo: React.FC = () => {
 
       <div
         style={{ marginTop: "20px" }}
-        className="w-full flex flex-col items-center justify-center md:flex-row"
+        className="w-full flex flex-col items-center justify-center lg:flex-row"
       >
         <div className={` w-full flex-col items-center  md:flex-row`}>
           <div className={` w-full flex flex-col items-center  md:flex-row`}>
@@ -141,7 +141,7 @@ const AuthorInfo: React.FC = () => {
         </div>
 
         <div
-          className={`w-full flex flex-col items-center justify-center md:flex-row`}
+          className={`w-full flex flex-col items-center justify-center lg:flex-row`}
         >
           <div style={{ width: "100%" }}>
             <Skills isGridLayout={true} />

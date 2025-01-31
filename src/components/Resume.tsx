@@ -39,7 +39,7 @@ const ResumeComponent: React.FC<ResumeComponentProps> = ({
 }) => {
   return (
     <div
-      className={` w-full flex flex-col items-center justify-center md:flex-row ${styles.timeline_container}`}
+      className={` w-full flex flex-col items-center justify-center lg:flex-row ${styles.timeline_container}`}
     >
       <div className={styles.timeline_section}>
         <h2 className="text-3xl font-bold underline">{firstTitle}</h2>

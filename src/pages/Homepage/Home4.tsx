@@ -21,13 +21,13 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ color }) => {
   return (
     <div
-      className={`w-full flex flex-col items-center justify-center md:flex-col ${styles.sidebar}`}
+      className={`w-full flex flex-col items-center justify-center lg:flex-col ${styles.sidebar}`}
     >
       <div className="logo">
         <img src={`src/assets/images/logo-black.png`} alt="Logo" />
       </div>
       <div style={{ height: "70px" }}></div>
-      <nav className="w-full flex flex-col md:flex-col items-center justify-center gap-5 ">
+      <nav className="w-full flex flex-col lg:flex-col items-center justify-center gap-5 ">
         <a href="#">
           <IoHomeOutline className={`${styles.icon}`} style={{ color }} />
         </a>
@@ -83,7 +83,7 @@ export const AboutUser: React.FC<AboutUserProps> = ({ color }) => {
       </h2>
       <h1 className="text-3xl font-bold">Tohidur Hasan</h1>
       <p>Graphic Designer, HTML Coder, PHP Programmer and Project Manager</p>
-      <div className="w-full flex flex-col md:flex-row justify-between items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center">
         <button className="bg-white text-purple-900 font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
           Start consulting
         </button>
@@ -107,7 +107,7 @@ export const ProfileCard: React.FC = () => {
       </div>
       <div>
         <h3>Tohidur Hasan</h3>
-        <p style={{ color: "white" }}>
+        <p className={styles.role}>
           Graphic Designer, HTML Coder, and Project Manager
         </p>
         <div className={styles.button}>
@@ -138,7 +138,7 @@ export const Homepage4: React.FC<Themes> = ({ color, backgroundColor }) => {
         color,
         opacity: "0.8",
       }}
-      className={`${styles.container} w-full flex flex-col md:flex-row justify-between `}
+      className={`${styles.container} w-full flex flex-col lg:flex-row justify-between `}
     >
       <Sidebar color={color} />
       <AboutUser color={color} />
