@@ -6,17 +6,35 @@
 
 @keyframes rotateAndResize {
   0% {
-    width: 300dvh;
+    width: 250px;
     transform: rotate(0deg);
     opacity: 1;
   }
   50% {
-    width: 250px;
+    width: 150px;
     transform: rotate(180deg);
     opacity: 1;
   }
   100% {
+    width: 150px;
+    transform: rotate(360deg);
+    opacity: 0; /* Hide the image */
+  }
+}
+
+@keyframes rotateAndResize {
+  0% {
     width: 250px;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    width: 150px;
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
     transform: rotate(360deg);
     opacity: 0; /* Hide the image */
   }
@@ -261,14 +279,6 @@ body {
   margin-bottom: 10px;
 }
 
-.title_animation {
-  position: relative;
-  margin-inline-start: 160%;
-  z-index: 3;
-  width: 250px;
-  margin-top: 0;
-}
-
 /* Header */
 
 .header_container {
@@ -318,12 +328,111 @@ p {
   padding-left: 0;
 }
 
-.title_animation {
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 12%;
+  margin-left: 8.5%;
+}
+
+.img {
+  border-radius: 50%;
+  width: 300px;
+  margin-top: 120px;
+  margin-right: 170px;
+}
+
+.follows_box {
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 53%;
+  border-radius: 20px;
+  margin-inline-start: 35%;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+  z-index: 2;
+}
+
+.follows_box p {
+  color: black !important;
+  font-weight: bold;
+  line-height: 22px;
+  margin-top: -5%;
+  font-size: 17px !important;
+}
+
+.follows_box h2 {
+  color: #6928e6;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.animation_container {
   position: relative;
-  margin-inline-start: 160%;
-  z-index: 3;
-  width: 250px;
-  margin-top: 0;
+  transform: none;
+  margin-top: -350px;
+  margin-left: 450px;
+  z-index: 20;
+}
+
+.shaps_logo {
+  position: relative;
+  animation: rotateAndResize 5s infinite linear;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Մեդիա հարցում 768px-ից փոքր էկրանների համար */
+/* Header */
+
+.header_container {
+  margin: 0 auto;
+  background: linear-gradient(90deg, #00003d, #010060);
+  border-bottom-left-radius: 115%;
+  border-bottom-right-radius: 170%;
+  height: 80vh;
+}
+
+.box_content p {
+  color: white !important;
+}
+
+.box {
+  height: 450px;
+  color: white;
+  margin: 0px;
+}
+
+.box_content {
+  color: white;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-inline-start: 7%;
+  margin-block-end: 20%;
+  text-align: start;
+}
+
+.box_content h2 {
+  font-size: 30px;
+  text-align: start;
+  margin: 0px;
+  margin-top: 25%;
+}
+
+.box_content h1,
+p {
+  margin-top: 40px;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.box_content ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .circle {
@@ -369,45 +478,152 @@ p {
   margin-top: 5%;
 }
 
-/* Մեդիա հարցում 768px-ից փոքր էկրանների համար */
-@media (max-width: 768px) {
-  .box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.animation_container {
+  position: relative;
+  transform: none;
+  margin-top: -350px;
+  margin-left: 450px;
+  z-index: 20;
+}
 
-  .box_content {
-    margin-inline-start: 0;
-    margin-block-end: 10%;
-  }
+.shaps_logo {
+  position: relative;
+  animation: rotateAndResize 5s infinite linear;
+  transition: opacity 0.5s ease-out;
+}
 
-  .box_content h2 {
-    margin-top: 10%;
-  }
+/* Media Queries */
 
-  .box_content h1,
-  p {
-    margin-top: 20px;
-    font-size: 40px;
-  }
-
-  .img {
-    margin-top: 20px;
-    margin-right: 0;
-    width: 200px;
-  }
-
+@media (max-width: 1280) {
   .follows_box {
-    position: relative;
-    top: 0;
-    margin-inline-start: 0;
-    margin-top: 20px;
+    margin-left: 400px;
   }
 
   .circle {
-    position: relative;
-    margin-top: 20px;
-    margin-left: 0;
+    margin: 0px;
+    margin-top: 250px;
+    margin-left: 250px;
+  }
+}
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .header_container {
+    height: 80vh;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 150%;
+  }
+
+  .box_content h1 {
+    font-size: 50px;
+  }
+
+  .box_content p {
+    font-size: 18px;
+  }
+
+  .follows_box {
+    margin: 0px;
+    left: 400px;
+    top: 350px;
+  }
+
+  .img {
+    width: 250px;
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+  .follows_box {
+    margin-inline-start: 25%;
+  }
+
+  .circle {
+    margin: 0px;
+    margin-top: 200px;
+    margin-left: 200px;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .header_container {
+    height: 60vh;
+    border-bottom-left-radius: 90%;
+    border-bottom-right-radius: 130%;
+  }
+
+  .box_content h1 {
+    font-size: 40px;
+  }
+
+  .box_content p {
+    font-size: 16px;
+  }
+
+  .img {
+    margin: 0px;
+    width: 300px;
+    margin-top: -200px;
+    margin-left: 350px;
+  }
+
+  .follows_box {
+    margin-inline-start: 20%;
+    margin-top: 50px;
+  }
+
+  .circle {
+    margin: 0 auto;
+    margin-top: 500px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .header_container {
+    height: 70vh;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 110%;
+  }
+
+  .box_content h1 {
+    font-size: 30px;
+  }
+
+  .box_content p {
+    font-size: 14px;
+  }
+
+  .follows_box {
+    margin-inline-start: 20%;
+    margin-top: 250px;
+  }
+
+  .circle {
+    margin: 0 auto;
+    margin-top: 500px;
+    margin-left: -50px;
+  }
+
+  .img {
+    margin: 0px;
+    width: 350px;
+    margin-top: -120px;
+    margin-left: 150px;
+  }
+
+  .follows_box {
+    margin-inline-start: 10%;
+    width: 150px;
+    height: 120px;
+  }
+
+  .follows_box h2 {
+    font-size: 30px;
+  }
+
+  .follows_box p {
+    font-size: 14px;
   }
 }

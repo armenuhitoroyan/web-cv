@@ -28,10 +28,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ color }) => {
       </div>
       <div style={{ height: "70px" }}></div>
       <nav className="w-full flex flex-col lg:flex-col items-center justify-center gap-5 ">
-        <a href="#">
+        <a href={`/`}>
           <IoHomeOutline className={`${styles.icon}`} style={{ color }} />
         </a>
-        <a href="#">
+        <a href="/about">
           <SlUser className={`sl-user ${styles.icon}`} style={{ color }} />
         </a>
         <a href="#">
@@ -40,19 +40,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ color }) => {
             style={{ color }}
           />
         </a>
-        <a href="../Portfolio.tsx">
+        <a href="/portfolio">
           <SlBriefcase
             className={`sl-briefcase ${styles.icon}`}
             style={{ color }}
           />
         </a>
-        <a href="../Portfolio.tsx">
+        <a href="#">
           <FaRegFolder
             className={`fa-reg-folder ${styles.icon}`}
             style={{ color }}
           />
         </a>
-        <a href="../Portfolio.tsx">
+        <a href="/contact">
           <SlEnvelopeOpen
             className={`sl-envelop-open ${styles.icon}`}
             style={{ color }}

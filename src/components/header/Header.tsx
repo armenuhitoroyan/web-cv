@@ -52,6 +52,16 @@ const Circle: React.FC<CircleProps> = ({
   );
 };
 
+const Animation: React.FC = () => (
+  <div className={`${styles.animation_container}`}>
+    <img
+      className={`${styles.shaps_logo}`}
+      src="src/assets/images/shaps.png"
+      alt="Shaps"
+    />
+  </div>
+);
+
 const Header: React.FC = () => {
   return (
     <div className={styles.header_container}>
@@ -84,10 +94,8 @@ const Header: React.FC = () => {
                 <li>Available for Freelance</li>
               </ul>
             </div>
-            {/* <div className={styles.title_animation}>
-           
-              <div>Animation Component</div>
-            </div> */}
+            {/* <Animation /> */}
+
             <div>
               <Circle color="yellow" left="50%" top="0px" />
             </div>

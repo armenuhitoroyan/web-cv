@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
               onChange={handleChange}
               className="select-dropdown"
             >
-              <option style={{ display: "none" }} value="" disabled>
+              <option value="" disabled>
                 Services
               </option>
               <option value="/service">Services</option>
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
               onChange={handleChange}
               className="select-dropdown"
             >
-              <option style={{ display: "none" }} value="" disabled>
+              <option value="" disabled>
                 Portfolio
               </option>
               <option value="/portfolio">Portfolio</option>
@@ -112,8 +112,8 @@ const Navbar: React.FC = () => {
               <option value="" disabled>
                 Blog
               </option>
-              <option value="/blog">Blog 1</option>
               <option value="/our-blog">Our Blog </option>
+              <option value="/blog">Blog 1</option>
               <option value="/blog-details-2">Blog 2</option>
             </select>
           </li>
@@ -132,7 +132,6 @@ const Navbar: React.FC = () => {
                 Pages
               </option>
 
-              {/* style={{ visibility: "hidden" }} */}
               <option value="/about">About</option>
               <option value="/pricing-plans">Pricing Plans</option>
               <option value="/404">Error</option>

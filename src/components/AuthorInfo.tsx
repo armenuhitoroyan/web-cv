@@ -76,11 +76,11 @@ const AuthorInfo: React.FC = () => {
             <div
               className={`${styles.button} w-full flex flex-col items-center`}
             >
-              <button className="bg-white font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+              <button className="bg-white font-bold py-2 px-4 rounded-full mt-20 hover:bg-gray-100 transition">
                 Select Now
               </button>
             </div>
-            <div>
+            <div className="mt-20">
               <Pages size="40px" />
             </div>
           </div>
@@ -98,7 +98,7 @@ const AuthorInfo: React.FC = () => {
               aul erdum. erdum.
             </p>
           </div>
-          <div style={{ marginLeft: "5%" }}>
+          <div className="mt-10" style={{ marginLeft: "5%" }}>
             <img
               src="https://afsu.tohidur.com/img/sine.png"
               alt="Image not found"

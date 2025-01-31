@@ -408,7 +408,7 @@ const Homepage2: React.FC = () => {
       >
         <h2>Let's Create Something Creative Together</h2>
         <p>We can't wait to hear from making something beautiful and new!</p>
-        <button className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
+        <button className="bg-white text-white font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition">
           Start Consulting
         </button>
       </div>

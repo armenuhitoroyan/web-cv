@@ -48,26 +48,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   );
 };
 
-const Assessment: React.FC = () => (
-  <div
-    className={`w-full flex   items-center justify-center ${styles.content_wrapper}`}
-  >
-    <div
-      className={`w-full flex   items-center justify-center ${styles.left_section}`}
-    >
-      <h2>1M+ Satisfied Customers</h2>
-      <p>
-        Vestibulum vitae lorim tellus nec dui dictum lorim ac, place uilm rat
-        Lorse ipsom
-      </p>
-      <div className={styles.animation_box}>{/* <Animation /> */}</div>
-      <div className={styles.nav_buttons}>
-        <button></button>
-        <button></button>
-      </div>
-    </div>
-  </div>
-);
+
 
 const images = [
   {
@@ -165,7 +146,7 @@ const HomePage: React.FC = () => {
     department: string;
     message: string;
   }) => {
-    // Handle the submitted form data
+    // user-ի լրացրած տվյալները
     console.log("User Added:", formData);
   };
 
