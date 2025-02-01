@@ -57,7 +57,7 @@ function AppRoutesContent(): JSX.Element {
 
     setLoading(!(isOnline && wsStatus));
 
-    // Ավելացնում ենք միջոցառումներ
+    // Ավելացնում ենք event-ներ
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
 
@@ -103,6 +103,8 @@ function AppRoutesContent(): JSX.Element {
             <Route path="/404" element={<ErrorPage />} />
             <Route path="/pricing-plans" element={<PricingPlans />} />
             <Route path="/contact" element={<Contact />} />
+            {/* սխալ URL-ների դեպքում */}
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
       )}
