@@ -39,6 +39,12 @@ function AppRoutesContent(): JSX.Element {
   console.log(isScrolled);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [loading, setLoading]);
+
+  useEffect(() => {
     // Ստուգում ենք ինտերնետի կապը
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
@@ -65,7 +71,7 @@ function AppRoutesContent(): JSX.Element {
 
   return (
     <>
-      {!isOnline ? (
+      {!isOnline || loading ? (
         <div>
           <LoadingComponent />
           {/* <Navbar /> */}
